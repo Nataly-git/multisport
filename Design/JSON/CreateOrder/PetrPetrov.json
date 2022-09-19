@@ -1,0 +1,14 @@
+{
+  "user": {
+    "email": "petr_petrov@gmail.com"
+  },
+  "order": {
+    "date": "2022-09-15",
+    "orderStatus": {
+      "status": "created"
+    },
+    "cardType": {
+      "type": "Multisport classic"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "guest": {
+    "time": "2021-04-5 09:34:21",
+    "browser": "Google Chrome",
+    "ipAddress": "162.192.0.6",
+    "device": "Iphone 14 pro"
+  },
+  "sportClub": {
+    "name": "Gym24",
+    "password": "GymPassword24"
+  }
+}
+

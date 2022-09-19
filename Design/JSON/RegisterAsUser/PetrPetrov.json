@@ -1,0 +1,21 @@
+{
+  "guest": {
+    "time": "2022-07-22 10:41:12",
+    "browser": "Microsoft Edge",
+    "ipAddress": "178.192.12.0",
+    "device": "Iphone 14 Pro Max"
+  },
+  "user": {
+    "email": "petr_petrov@gmail.com",
+    "name": "Petr",
+    "surname": "Petrov",
+    "password": "PetrPasswordPetrov",
+    "contacts": {
+      "phoneNumber": "+333123542",
+      "city": "Minsk",
+      "street": "Gurskogo",
+      "building": "44",
+      "apartments": "102"
+    }
+  }
+}

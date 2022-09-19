@@ -1,0 +1,21 @@
+{
+  "user": {
+    "email": "anton_antonov@gmail.com"
+  },
+  "order": {
+    "date": "2022-08-20",
+    "orderStatus": {
+      "status": "paid"
+    }
+  },
+  "payment": {
+    "time": "2022-08-20 19:39:01",
+    "method": "Card"
+  },
+  "card": {
+    "startDate": "2022-09-01",
+    "cardType": {
+      "type": "Multisport light"
+    }
+  }
+}

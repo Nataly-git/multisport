@@ -1,0 +1,20 @@
+{
+  "user": {
+    "email": "petr_petrov@gmail.com"
+  },
+  "card": {
+    "startDate": "2022-10-1",
+    "cardType": {
+      "type": "Multisport classic"
+    }
+  },
+  "sportClub": {
+    "name": "Gym24"
+  },
+  "activity": {
+    "name": "sauna"
+  },
+  "visit": {
+    "date": "2022-10-07"
+  }
+}

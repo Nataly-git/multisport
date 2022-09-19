@@ -1,0 +1,21 @@
+{
+  "guest": {
+    "time": "2022-01-27 12:00:21",
+    "browser": "Google Chrome",
+    "ipAddress": "162.192.0.6",
+    "device": "Iphone 13 pro max"
+  },
+  "user": {
+    "email": "anton_antonov@gmail.com",
+    "name": "Anton",
+    "surname": "Antonov",
+    "password": "AntonPasswordAntonov",
+    "contacts": {
+      "phoneNumber": "+918273645",
+      "city": "Minsk",
+      "street": "Nezavisimosti",
+      "building": "4",
+      "apartments": "521"
+    }
+  }
+}
