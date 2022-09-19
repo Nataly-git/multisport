@@ -1,0 +1,37 @@
+{
+  "guest": {
+    "time": "2021-04-5 09:34:21",
+    "browser": "Google Chrome",
+    "ipAddress": "162.192.0.6",
+    "device": "Iphone 12 pro max"
+  },
+  "sportClub": {
+    "email": "xfit_gym@gmail.com",
+    "name": "Xfit",
+    "password": "XPasswordFit",
+    "workingHours": "From 10 am to 10 pm",
+    "contacts": {
+      "phoneNumber": "+987654321",
+      "city": "Minsk",
+      "street": "Chapaeva",
+      "building": "5",
+      "apartments": "414"
+    }
+  },
+  "cardTypes": [
+    {
+      "type": "Multisport light"
+    },
+    {
+      "type": "Multisport classic"
+    }
+  ],
+  "activities": [
+    {
+      "activity": {
+        "name": "tennis"
+      },
+      "duration": "1.30"
+    }
+  ]
+}
