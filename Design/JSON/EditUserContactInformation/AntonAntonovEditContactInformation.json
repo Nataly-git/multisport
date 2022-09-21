@@ -1,10 +1,10 @@
 {
+  "user": {
+    "email": "ivan_ivanov@gmail.com"
+  },
   "contacts": {
     "street": "Miroshnichenko",
     "building": "55",
-    "apartments": "221",
-    "user": {
-      "email": "ivan_ivanov@gmail.com"
-    }
+    "apartments": "221"
   }
 }

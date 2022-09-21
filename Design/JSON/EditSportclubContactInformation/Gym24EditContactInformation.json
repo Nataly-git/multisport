@@ -1,8 +1,8 @@
 {
+  "sportClub": {
+    "email": "gym24@gmail.com"
+  },
   "contacts": {
-    "workingHours": "From 6 am to 10 pm",
-    "sportClub": {
-      "email": "gym24@gmail.com"
-    }
+    "workingHours": "From 6 am to 10 pm"
   }
 }
