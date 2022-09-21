@@ -1,0 +1,21 @@
+{
+  "guest": {
+    "time": "2021-04-05 09:34:21",
+    "browser": "Google Chrome",
+    "ipAddress": "162.192.0.6",
+    "device": "Iphone 12 pro max"
+  },
+  "user": {
+    "email": "ivan_ivanov@gmail.com",
+    "name": "Ivan",
+    "surname": "Ivanov",
+    "password": "IvanPasswordIvanov"
+  },
+  "contacts": {
+    "phoneNumber": "+123456789",
+    "city": "Minsk",
+    "street": "Chapaeva",
+    "building": "5",
+    "apartments": "414"
+  }
+}

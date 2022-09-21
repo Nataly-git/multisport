@@ -1,0 +1,21 @@
+{
+  "guest": {
+    "time": "2022-33-34 12:00:21",
+    "browser": "Opera",
+    "ipAddress": "192.192.0.8",
+    "device": "Iphone 11"
+  },
+  "user": {
+    "email": "some_acc@gmail.com",
+    "name": "Antonio",
+    "surname": "Maharadja",
+    "password": "password"
+  },
+  "contacts": {
+    "phoneNumber": "+51616165",
+    "city": "Grodno",
+    "street": "Kastusia K.",
+    "building": "5",
+    "apartments": "3"
+  }
+}
