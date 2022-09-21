@@ -3,10 +3,12 @@
     "date": "2022-09-15",
     "orderStatus": {
       "status": "created"
-    },
-    "cardType": {
-      "type": "Multisport classic"
-    },
-    "user": "petr_petrov@gmail.com"
+    }
+  },
+  "user": {
+    "email": "petr_petrov@gmail.com"
+  },
+  "cardType": {
+    "type": "Multisport classic"
   }
 }

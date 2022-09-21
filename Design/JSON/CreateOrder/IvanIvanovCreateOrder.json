@@ -3,10 +3,12 @@
     "date": "2022-09-19",
     "orderStatus": {
       "status": "created"
-    },
-    "cardType": {
-      "type": "Multisport plus"
-    },
-    "user": "ivan_ivanov@gmail.com"
+    }
+  },
+  "user": {
+    "email": "ivan_ivanov@gmail.com"
+  },
+  "cardType": {
+    "type": "Multisport plus"
   }
 }
