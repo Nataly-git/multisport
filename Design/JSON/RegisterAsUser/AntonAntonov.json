@@ -16,9 +16,6 @@
     "city": "Minsk",
     "street": "Nezavisimosti",
     "building": "4",
-    "apartments": "521",
-    "user": {
-      "email": "anton_antonov@gmail.com"
-    }
+    "apartments": "521"
   }
 }

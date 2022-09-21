@@ -16,9 +16,6 @@
     "city": "Minsk",
     "street": "Chapaeva",
     "building": "5",
-    "apartments": "414",
-    "user": {
-      "email": "ivan_ivanov@gmail.com"
-    }
+    "apartments": "414"
   }
 }
