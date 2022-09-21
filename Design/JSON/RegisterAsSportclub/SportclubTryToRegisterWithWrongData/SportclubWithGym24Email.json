@@ -1,0 +1,33 @@
+{
+  "guest": {
+    "time": "2021-12-05 09:34:21",
+    "browser": "Google Chrome",
+    "ipAddress": "162.201.0.6",
+    "device": "Iphone 14 pro"
+  },
+  "sportClub": {
+    "email": "gym24@gmail.com",
+    "name": "NotGym24",
+    "password": "NotGymPassword24",
+    "city": "Minsk",
+    "street": "Pobediteley",
+    "building": "7"
+  },
+  "contacts": {
+    "phoneNumber": "+123987465",
+    "workingHours": "From 10 am to 10 pm"
+  },
+  "cardTypes": [
+    {
+      "type": "Multisport plus"
+    }
+  ],
+  "activities": [
+    {
+      "activity": {
+        "name": "gym"
+      },
+      "duration": "1.30"
+    }
+  ]
+}
