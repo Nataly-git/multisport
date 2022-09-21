@@ -1,0 +1,12 @@
+{
+  "guest": {
+    "time": "2022-07-23 11:41:12",
+    "browser": "Microsoft Edge",
+    "ipAddress": "178.192.12.0",
+    "device": "Iphone 14 Pro Max"
+  },
+  "user": {
+    "email": "ivan_ivanov@gmail.com",
+    "password": "IvanPasswordIvanov"
+  }
+}
