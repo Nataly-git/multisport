@@ -1,24 +1,21 @@
 {
-  "payment": {
-    "time": "2022-08-20 19:39:01",
-    "method": "Card",
-    "order": {
-      "date": "2022-08-20",
-      "orderStatus": {
-        "status": "paid"
-      },
-      "user": {
-        "email": "anton_antonov@gmail.com"
-      }
-    }
-  },
   "card": {
     "startDate": "2022-09-01",
     "cardType": {
       "type": "Multisport light"
     },
-    "user": {
-      "email": "anton_antonov@gmail.com"
+    "payment": {
+      "time": "2022-08-20 19:39:01",
+      "method": "Card",
+      "order": {
+        "date": "2022-08-20",
+        "orderStatus": {
+          "status": "paid"
+        },
+        "user": {
+          "email": "anton_antonov@gmail.com"
+        }
+      }
     }
   }
 }

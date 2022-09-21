@@ -1,24 +1,21 @@
 {
-  "payment": {
-    "time": "2022-09-16 10:01:34",
-    "method": "Card",
-    "order": {
-      "date": "2022-09-15",
-      "orderStatus": {
-        "status": "paid"
-      },
-      "user": {
-        "email": "petr_petrov@gmail.com"
-      }
-    }
-  },
   "card": {
     "startDate": "2022-10-01",
     "cardType": {
       "type": "Multisport classic"
     },
-    "user": {
-      "email": "petr_petrov@gmail.com"
+    "payment": {
+      "time": "2022-09-16 10:01:34",
+      "method": "Card",
+      "order": {
+        "date": "2022-09-15",
+        "orderStatus": {
+          "status": "paid"
+        },
+        "user": {
+          "email": "petr_petrov@gmail.com"
+        }
+      }
     }
   }
 }
