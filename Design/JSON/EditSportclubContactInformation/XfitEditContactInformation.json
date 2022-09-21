@@ -1,9 +1,9 @@
 {
+  "sportClub": {
+    "email": "xfit_gym@gmail.com"
+  },
   "contacts": {
     "phoneNumber": "+377654321",
     "workingHours": "From 9 am to 10 pm",
-    "sportClub": {
-      "email": "xfit_gym@gmail.com"
-    }
   }
 }
