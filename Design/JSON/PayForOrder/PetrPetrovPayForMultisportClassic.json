@@ -6,16 +6,19 @@
     },
     "payment": {
       "time": "2022-09-16 10:01:34",
-      "method": "Card",
-      "order": {
-        "date": "2022-09-15",
-        "orderStatus": {
-          "status": "paid"
-        },
-        "user": {
-          "email": "petr_petrov@gmail.com"
-        }
-      }
+      "method": "Card"
+    }
+  },
+  "user": {
+    "email": "petr_petrov@gmail.com"
+  },
+  "order": {
+    "user": {
+      "email": "petr_petrov@gmail.com"
+    },
+    "date": "2022-09-15",
+    "orderStatus": {
+      "status": "paid"
     }
   }
 }

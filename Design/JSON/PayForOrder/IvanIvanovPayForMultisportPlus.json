@@ -6,16 +6,19 @@
     },
     "payment": {
       "time": "2022-09-19 09:12:01",
-      "method": "Card",
-      "order": {
-        "date": "2022-09-19",
-        "orderStatus": {
-          "status": "paid"
-        },
-        "user": {
-          "email": "ivan_ivanov@gmail.com"
-        }
-      }
+      "method": "Card"
+    }
+  },
+  "user": {
+    "email": "ivan_ivanov@gmail.com"
+  },
+  "order": {
+    "user": {
+      "email": "ivan_ivanov@gmail.com"
+    },
+    "date": "2022-09-19",
+    "orderStatus": {
+      "status": "paid"
     }
   }
 }
