@@ -1,7 +1,4 @@
 {
-  "user": {
-    "email": "ivan_ivanov@gmail.com"
-  },
   "order": {
     "date": "2022-09-19",
     "orderStatus": {
@@ -9,6 +6,7 @@
     },
     "cardType": {
       "type": "Multisport plus"
-    }
+    },
+    "user": "ivan_ivanov@gmail.com"
   }
 }

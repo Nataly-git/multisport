@@ -1,12 +1,12 @@
 {
-  "user": {
-    "email": "ivan_ivanov@gmail.com"
-  },
-  "sportClub": {
-    "name": "Xfit"
-  },
   "rating": {
     "rate": 9,
-    "comment": "The best gym!!!"
+    "comment": "The best gym!!!",
+    "user": {
+      "email": "ivan_ivanov@gmail.com"
+    },
+    "sportClub": {
+      "email": "xfit_gym@gmail.com"
+    }
   }
 }

@@ -1,12 +1,11 @@
 {
-  "user": {
-    "email": "petr_petrov@gmail.com"
-  },
-  "sportClub": {
-    "name": "Gym24"
-  },
   "rating": {
     "rate": 7,
-    "comment": "Good gym!"
+    "user": {
+      "email": "petr_petrov@gmail.com"
+    },
+    "sportClub": {
+      "email": "gym24@gmail.com"
+    }
   }
 }

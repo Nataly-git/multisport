@@ -9,13 +9,16 @@
     "email": "anton_antonov@gmail.com",
     "name": "Anton",
     "surname": "Antonov",
-    "password": "AntonPasswordAntonov",
-    "contacts": {
-      "phoneNumber": "+918273645",
-      "city": "Minsk",
-      "street": "Nezavisimosti",
-      "building": "4",
-      "apartments": "521"
+    "password": "AntonPasswordAntonov"
+  },
+  "contacts": {
+    "phoneNumber": "+918273645",
+    "city": "Minsk",
+    "street": "Nezavisimosti",
+    "building": "4",
+    "apartments": "521",
+    "user": {
+      "email": "anton_antonov@gmail.com"
     }
   }
 }

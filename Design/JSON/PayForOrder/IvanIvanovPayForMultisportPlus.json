@@ -1,21 +1,24 @@
 {
-  "user": {
-    "email": "ivan_ivanov@gmail.com"
-  },
-  "order": {
-    "date": "2022-09-19",
-    "orderStatus": {
-      "status": "paid"
-    }
-  },
   "payment": {
     "time": "2022-09-19 09:12:01",
-    "method": "Card"
+    "method": "Card",
+    "order": {
+      "date": "2022-09-19",
+      "orderStatus": {
+        "status": "paid"
+      },
+      "user": {
+        "email": "ivan_ivanov@gmail.com"
+      }
+    }
   },
   "card": {
     "startDate": "2022-10-01",
     "cardType": {
       "type": "Multisport plus"
+    },
+    "user": {
+      "email": "ivan_ivanov@gmail.com"
     }
   }
 }

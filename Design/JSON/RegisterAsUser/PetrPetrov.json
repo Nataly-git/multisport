@@ -9,13 +9,16 @@
     "email": "petr_petrov@gmail.com",
     "name": "Petr",
     "surname": "Petrov",
-    "password": "PetrPasswordPetrov",
-    "contacts": {
-      "phoneNumber": "+333123542",
-      "city": "Minsk",
-      "street": "Gurskogo",
-      "building": "44",
-      "apartments": "102"
+    "password": "PetrPasswordPetrov"
+  },
+  "contacts": {
+    "phoneNumber": "+333123542",
+    "city": "Minsk",
+    "street": "Gurskogo",
+    "building": "44",
+    "apartments": "102",
+    "user": {
+      "email": "petr_petrov@gmail.com"
     }
   }
 }

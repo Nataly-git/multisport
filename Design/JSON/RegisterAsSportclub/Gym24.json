@@ -1,6 +1,6 @@
 {
   "guest": {
-    "time": "2021-04-5 09:34:21",
+    "time": "2021-04-05 09:34:21",
     "browser": "Google Chrome",
     "ipAddress": "162.192.0.6",
     "device": "Iphone 14 pro"
@@ -9,13 +9,15 @@
     "email": "gym24@gmail.com",
     "name": "gym24",
     "password": "GymPassword24",
+    "city": "Minsk",
+    "street": "Pobediteley",
+    "building": "7"
+  },
+  "contacts": {
+    "phoneNumber": "+123987465",
     "workingHours": "From 10 am to 10 pm",
-    "contacts": {
-      "phoneNumber": "+123987465",
-      "city": "Minsk",
-      "street": "Pobediteley",
-      "building": "7",
-      "apartments": "3"
+    "sportClub": {
+      "email": "gym24@gmail.com"
     }
   },
   "cardTypes": [
