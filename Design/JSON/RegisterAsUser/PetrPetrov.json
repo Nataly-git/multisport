@@ -16,9 +16,6 @@
     "city": "Minsk",
     "street": "Gurskogo",
     "building": "44",
-    "apartments": "102",
-    "user": {
-      "email": "petr_petrov@gmail.com"
-    }
+    "apartments": "102"
   }
 }
