@@ -1,0 +1,25 @@
+{
+  "card": {
+    "number": "Plus00000",
+    "startDate": "2022-10-01",
+    "cardType": {
+      "type": "Multisport plus"
+    }
+  },
+  "user": {
+    "email": "ivan_ivanov@gmail.com"
+  },
+  "order": {
+    "user": {
+      "email": "petr_petrov@gmail.com"
+    },
+    "date": "2022-09-15",
+    "orderStatus": {
+      "status": "paid"
+    }
+  },
+  "payment": {
+    "time": "2022-09-19 09:12:01",
+    "method": "Card"
+  }
+}

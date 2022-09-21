@@ -1,0 +1,17 @@
+{
+  "visit": {
+    "dateTime": "2022-10-03 12:03:50"
+    },
+  "sportClub": {
+    "email": "xfit_gym@gmail.com"
+  },
+  "activity": {
+    "name": "gym"
+  },
+  "card": {
+    "number": "Plus12345"
+  },
+  "user": {
+    "email": "anton_antonov@gmail.com"
+  }
+}

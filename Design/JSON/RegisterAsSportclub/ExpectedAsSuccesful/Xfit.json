@@ -34,6 +34,12 @@
         "name": "tennis"
       },
       "duration": "1.30"
+    },
+    {
+      "activity": {
+        "name": "gym"
+      },
+      "duration": "2.00"
     }
   ]
 }

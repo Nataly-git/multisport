@@ -1,11 +1,11 @@
 {
   "rating": {
-    "rate": 7,
-    "user": {
-      "email": "petr_petrov@gmail.com"
-    },
-    "sportClub": {
-      "email": "gym24@gmail.com"
-    }
+    "rate": 7
+  },
+  "user": {
+    "email": "petr_petrov@gmail.com"
+  },
+  "sportClub": {
+    "email": "gym24@gmail.com"
   }
 }
