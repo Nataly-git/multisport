@@ -4,15 +4,17 @@
     "sportClub": {
       "email": "xfit_gym@gmail.com"
     },
-    "user": {
-      "email": "ivan_ivanov@gmail.com"
-    },
     "activity": {
       "name": "gym"
-    }
+    },
     "card": {
       "startDate": "2022-10-01",
-      "user": "ivan_ivanov@gmail.com"
+      "user": {
+        "email": "ivan_ivanov@gmail.com"
+      },
+      "cardType": {
+        "type": "Multisport plus"
+      }
     }
   }
 }

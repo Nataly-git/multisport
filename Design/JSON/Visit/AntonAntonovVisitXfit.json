@@ -4,15 +4,17 @@
     "sportClub": {
       "email": "xfit_gym@gmail.com"
     },
-    "user": {
-      "email": "anton_antonov@gmail.com"
-    },
     "activity": {
       "name": "gym"
     },
     "card": {
       "startDate": "2022-09-01",
-      "user": "anton_antonov@gmail.com"
+      "user": {
+        "email": "anton_antonov@gmail.com"
+      },
+      "cardType": {
+        "type": "Multisport light"
+      }
     }
   }
 }

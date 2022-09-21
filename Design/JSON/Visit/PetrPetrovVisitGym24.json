@@ -4,15 +4,17 @@
     "sportClub": {
       "email": "gym24@gmail.com"
     },
-    "user": {
-      "email": "petr_petrov@gmail.com"
-    },
     "activity": {
       "name": "gym"
     },
     "card": {
       "startDate": "2022-10-01",
-      "user": "petr_petrov@gmail.com"
+      "user": {
+        "email": "petr_petrov@gmail.com"
+      },
+      "cardType": {
+        "type": "Multisport classic"
+      }
     }
   }
 }
