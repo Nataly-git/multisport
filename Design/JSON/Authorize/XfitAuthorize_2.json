@@ -1,0 +1,13 @@
+{
+  "guest": {
+    "time": "2021-09-02 09:02:55",
+    "browser": "Google Chrome",
+    "ipAddress": "162.192.0.6",
+    "device": "Iphone 12 pro max"
+  },
+  "sportClub": {
+    "email": "xfit_gym@gmail.com",
+    "password": "XPasswordFit"
+  }
+}
+

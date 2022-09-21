@@ -1,0 +1,12 @@
+{
+  "guest": {
+    "time": "2021-08-10 09:34:21",
+    "browser": "Mozilla",
+    "ipAddress": "162.192.0.6",
+    "device": "Iphone 12 pro max"
+  },
+  "user": {
+    "email": "ivan_ivanov@gmail.com",
+    "password": "IvanPasswordIvanov"
+  }
+}
