@@ -1,17 +1,17 @@
 {
   "visit": {
-    "dateTime": "2022-10-07 12:40:55",
-    "sportClub": {
-      "email": "gym24@gmail.com"
-    },
-    "activity": {
-      "name": "sauna"
-    },
-    "card": {
-      "number": "Classic12345"
-    },
-    "user": {
-      "email": "petr_petrov@gmail.com"
-    }
+    "dateTime": "2022-10-07 12:40:55"
+  },
+  "sportClub": {
+    "email": "gym24@gmail.com"
+  },
+  "activity": {
+    "name": "sauna"
+  },
+  "card": {
+    "number": "Classic12345"
+  },
+  "user": {
+    "email": "petr_petrov@gmail.com"
   }
 }
