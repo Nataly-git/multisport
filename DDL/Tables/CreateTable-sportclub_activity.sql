@@ -1,9 +1,8 @@
-USE
-Multisport;
+USE Multisport;
 
-DROP TABLE IF EXISTS sportclub_activities;
+DROP TABLE IF EXISTS sportclub_activity;
 
-CREATE TABLE sportclub_activities
+CREATE TABLE sportclub_activity
 (
     sportclub_id INT           NOT NULL,
     activity_id  INT           NOT NULL,
