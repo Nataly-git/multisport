@@ -1,0 +1,25 @@
+{
+  "card": {
+    "number": "Light00000",
+    "startDate": "2022-09-01",
+    "cardType": {
+      "type": "Multisport light"
+    }
+  },
+  "user": {
+    "email": "anton_antonov@gmail.com"
+  },
+  "order": {
+    "user": {
+      "email": "ivan_ivanov@gmail.com"
+    },
+    "date": "2022-09-19",
+    "orderStatus": {
+      "status": "paid"
+    }
+  },
+  "payment": {
+    "time": "2022-08-20 19:39:01",
+    "method": "Card"
+  }
+}

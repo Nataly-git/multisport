@@ -1,12 +1,12 @@
 {
   "rating": {
     "rate": 1,
-    "comment": "The worst gym ever!!",
-    "user": {
-      "email": "anton_antonov@gmail.com"
-    },
-    "sportClub": {
-      "email": "xfit_gym@gmail.com"
-    }
+    "comment": "The worst gym ever!!"
+  },
+  "user": {
+    "email": "anton_antonov@gmail.com"
+  },
+  "sportClub": {
+    "email": "xfit_gym@gmail.com"
   }
 }

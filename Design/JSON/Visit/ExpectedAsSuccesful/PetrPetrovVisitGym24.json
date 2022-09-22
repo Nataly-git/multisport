@@ -8,13 +8,10 @@
       "name": "gym"
     },
     "card": {
-      "startDate": "2022-10-01",
-      "user": {
-        "email": "petr_petrov@gmail.com"
-      },
-      "cardType": {
-        "type": "Multisport classic"
-      }
+      "number": "Classic12345"
+    },
+    "user": {
+      "email": "petr_petrov@gmail.com"
     }
   }
 }

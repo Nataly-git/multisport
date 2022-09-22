@@ -1,12 +1,9 @@
 {
   "card": {
+    "number": "Plus12345",
     "startDate": "2022-10-01",
     "cardType": {
       "type": "Multisport plus"
-    },
-    "payment": {
-      "time": "2022-09-19 09:12:01",
-      "method": "Card"
     }
   },
   "user": {
@@ -20,5 +17,9 @@
     "orderStatus": {
       "status": "paid"
     }
+  },
+  "payment": {
+    "time": "2022-09-19 09:12:01",
+    "method": "Card"
   }
 }

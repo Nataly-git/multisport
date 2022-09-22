@@ -1,12 +1,9 @@
 {
   "card": {
+    "number": "Classic12345",
     "startDate": "2022-10-01",
     "cardType": {
       "type": "Multisport classic"
-    },
-    "payment": {
-      "time": "2022-09-16 10:01:34",
-      "method": "Card"
     }
   },
   "user": {
@@ -20,5 +17,9 @@
     "orderStatus": {
       "status": "paid"
     }
+  },
+  "payment": {
+    "time": "2022-09-16 10:01:34",
+    "method": "Card"
   }
 }

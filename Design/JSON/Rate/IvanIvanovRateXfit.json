@@ -1,12 +1,12 @@
 {
   "rating": {
     "rate": 9,
-    "comment": "The best gym!!!",
-    "user": {
-      "email": "ivan_ivanov@gmail.com"
-    },
-    "sportClub": {
-      "email": "xfit_gym@gmail.com"
-    }
+    "comment": "The best gym!!!"
+  },
+  "user": {
+    "email": "ivan_ivanov@gmail.com"
+  },
+  "sportClub": {
+    "email": "xfit_gym@gmail.com"
   }
 }

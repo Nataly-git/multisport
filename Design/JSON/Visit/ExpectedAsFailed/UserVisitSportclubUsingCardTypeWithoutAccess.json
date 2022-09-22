@@ -1,0 +1,17 @@
+{
+  "visit": {
+    "dateTime": "2022-09-15 09:32:20"
+  },
+  "sportClub": {
+    "email": "gym24@gmail.com"
+  },
+  "activity": {
+    "name": "gym"
+  },
+  "card": {
+    "number": "Light12345"
+  },
+  "user": {
+    "email": "anton_antonov@gmail.com"
+  }
+}
