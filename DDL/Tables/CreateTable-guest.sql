@@ -1,5 +1,4 @@
-USE
-Multisport;
+USE Multisport;
 
 DROP TABLE IF EXISTS guest;
 
