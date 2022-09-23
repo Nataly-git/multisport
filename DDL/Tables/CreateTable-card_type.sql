@@ -12,5 +12,5 @@ CREATE TABLE card_type
     CONSTRAINT PRIMARY KEY PK_card_type
         (
          card_type_id
-            )
+        )
 );
