@@ -1,6 +1,6 @@
 USE Multisport;
 
-CALL usp_addUniqueKey('order', 'AK_order_date_user', 'date, user');
+CALL usp_addUniqueKey('order', 'AK_order_date_user', 'date, user_id');
 
 CALL usp_AddForeignKey('order', 'FK_order_user', 'user_id',
                        'user', 'user_id');
