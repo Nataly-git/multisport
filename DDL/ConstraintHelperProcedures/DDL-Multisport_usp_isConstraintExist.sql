@@ -17,5 +17,3 @@ BEGIN
       AND constraint_name = constrName
       AND constraint_type = constrType;
 END$$
-
-DELIMITER ;

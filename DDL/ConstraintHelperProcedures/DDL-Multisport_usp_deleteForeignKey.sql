@@ -10,5 +10,3 @@ BEGIN
     SET @sqlString := CONCAT('alter table ', tableName, ' drop foreign key ', constrName, ';');
     CALL usp_executeStmt(@sqlString);
 END$$
-
-DELIMITER ;

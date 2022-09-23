@@ -20,5 +20,3 @@ BEGIN
                              ') references ', refTableName, ' (', refColumnName, ');');
     CALL usp_executeStmt(@sqlString);
 END$$
-
-DELIMITER ;
