@@ -1,15 +1,14 @@
-USE
-    Multisport;
+USE Multisport;
 
-DROP TABLE IF EXISTS sportclub_activities;
+DROP TABLE IF EXISTS sportclub_activity;
 
-CREATE TABLE sportclub_activities
+CREATE TABLE sportclub_activity
 (
     sportclub_id INT           NOT NULL,
     activity_id  INT           NOT NULL,
     duration     DECIMAL(3, 2) NOT NULL,
 
-    CONSTRAINT PK_sportclub_activities PRIMARY KEY
+    CONSTRAINT PK_sportclub_activity PRIMARY KEY
     (
          sportclub_id, activity_id
     )
