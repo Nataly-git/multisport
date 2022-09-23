@@ -13,4 +13,4 @@ CREATE TABLE card_type
         (
          card_type_id
             )
-)
+);
