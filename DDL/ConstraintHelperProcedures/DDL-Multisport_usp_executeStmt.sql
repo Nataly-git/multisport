@@ -11,3 +11,5 @@ BEGIN
     EXECUTE stmt;
     DEALLOCATE PREPARE stmt;
 END$$
+
+DELIMITER ;

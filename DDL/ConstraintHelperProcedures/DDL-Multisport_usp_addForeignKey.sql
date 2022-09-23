@@ -1,6 +1,6 @@
 USE Multisport;
 
-DELIMETER $$
+DELIMITER $$
 
 DROP PROCEDURE IF EXISTS usp_AddForeignKey;
 
@@ -20,3 +20,5 @@ BEGIN
                              ') references ', refTableName, ' (', refColumnName, ');');
     CALL usp_executeStmt(@sqlString);
 END$$
+
+DELIMITER ;

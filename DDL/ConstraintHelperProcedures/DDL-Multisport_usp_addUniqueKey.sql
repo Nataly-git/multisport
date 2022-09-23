@@ -1,4 +1,4 @@
-USE FoodOrderPlatform;
+USE Multisport;
 
 DELIMITER $$
 
@@ -18,3 +18,5 @@ BEGIN
             CONCAT('alter table ', tableName, ' add constraint unique key ', constrName, ' (', columnsNames, ');');
     CALL usp_executeStmt(@sqlString);
 END$$
+
+DELIMITER ;

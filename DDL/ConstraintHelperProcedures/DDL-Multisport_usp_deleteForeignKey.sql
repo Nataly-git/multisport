@@ -1,4 +1,4 @@
-USE FoodOrderPlatform;
+USE Multisport;
 
 DELIMITER $$
 
@@ -10,3 +10,5 @@ BEGIN
     SET @sqlString := CONCAT('alter table ', tableName, ' drop foreign key ', constrName, ';');
     CALL usp_executeStmt(@sqlString);
 END$$
+
+DELIMITER ;
