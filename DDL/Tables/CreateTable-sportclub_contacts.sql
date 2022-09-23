@@ -10,7 +10,7 @@ CREATE TABLE sportclub_contacts
     phone_number          VARCHAR(17) NOT NULL,
 
     CONSTRAINT PK_sportclub_contacts PRIMARY KEY
-        (
+    (
          sportclub_contacts_id
-            )
+    )
 );

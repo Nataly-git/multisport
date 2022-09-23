@@ -1,5 +1,5 @@
 USE
-Multisport;
+    Multisport;
 
 DROP TABLE IF EXISTS sportclub_activities;
 
@@ -10,7 +10,7 @@ CREATE TABLE sportclub_activities
     duration     DECIMAL(3, 2) NOT NULL,
 
     CONSTRAINT PK_sportclub_activities PRIMARY KEY
-        (
+    (
          sportclub_id, activity_id
-            )
+    )
 );

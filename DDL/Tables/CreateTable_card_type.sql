@@ -10,7 +10,7 @@ CREATE TABLE card_type
     max_number_visits TINYINT        NOT NULL,
 
     CONSTRAINT PRIMARY KEY PK_card_type
-        (
+    (
          card_type_id
-            )
-)
+    )
+);
