@@ -1,8 +1,8 @@
 USE Multisport;
 
-DROP TABLE IF EXISTS order;
+DROP TABLE IF EXISTS `order`;
 
-CREATE TABLE order
+CREATE TABLE `order`
 (
     order_id     BIGINT  NOT NULL AUTO_INCREMENT,
     user_id      INT     NOT NULL,
