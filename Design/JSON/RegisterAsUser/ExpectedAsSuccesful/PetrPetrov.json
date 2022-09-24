@@ -12,9 +12,9 @@
     "password": "PetrPasswordPetrov"
   },
   "contacts": {
-    "phoneNumber": "+333123542",
     "city": "Minsk",
     "street": "Gurskogo",
-    "building": "44"
+    "building": "44",
+    "phoneNumber": "+333123542"
   }
 }

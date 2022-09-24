@@ -12,10 +12,10 @@
     "password": "IvanPasswordIvanov"
   },
   "contacts": {
-    "phoneNumber": "+123456789",
+    "apartments": "414",
     "city": "Minsk",
     "street": "Chapaeva",
     "building": "5",
-    "apartments": "414"
+    "phoneNumber": "+123456789"
   }
 }

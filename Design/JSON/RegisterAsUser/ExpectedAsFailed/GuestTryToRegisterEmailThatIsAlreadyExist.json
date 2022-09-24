@@ -12,10 +12,10 @@
     "password": "password"
   },
   "contacts": {
-    "phoneNumber": "+51616165",
+    "apartments": "3",
     "city": "Grodno",
     "street": "Kastusia K.",
     "building": "5",
-    "apartments": "3"
+    "phoneNumber": "+51616165"
   }
 }
