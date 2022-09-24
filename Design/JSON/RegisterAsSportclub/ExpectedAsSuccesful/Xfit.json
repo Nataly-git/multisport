@@ -5,7 +5,7 @@
     "ipAddress": "162.192.0.6",
     "device": "Iphone 12 pro max"
   },
-  "sportClub": {
+  "sportclub": {
     "email": "xfit_gym@gmail.com",
     "name": "Xfit",
     "password": "XPasswordFit",
@@ -14,11 +14,8 @@
     "building": "5"
   },
   "contacts": {
-    "phoneNumber": "+987654321",
     "workingHours": "From 10 am to 10 pm",
-    "sportClub": {
-      "email": "xfit_gym@gmail.com"
-    }
+    "phoneNumber": "+987654321"
   },
   "cardTypes": [
     {

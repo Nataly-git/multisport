@@ -5,7 +5,7 @@
     "ipAddress": "162.201.0.6",
     "device": "Iphone 14 pro"
   },
-  "sportClub": {
+  "sportclub": {
     "email": "gym24@gmail.com",
     "name": "gym24",
     "password": "GymPassword24",
@@ -14,11 +14,8 @@
     "building": "7"
   },
   "contacts": {
-    "phoneNumber": "+123987465",
     "workingHours": "From 10 am to 10 pm",
-    "sportClub": {
-      "email": "gym24@gmail.com"
-    }
+    "phoneNumber": "+123987465"
   },
   "cardTypes": [
     {
@@ -31,13 +28,13 @@
   "activities": [
     {
       "activity": {
-        "name": "gym"
+        "acName": "gym"
       },
       "duration": "1.30"
     },
     {
       "activity": {
-        "name": "sauna"
+        "acName": "sauna"
       },
       "duration": "2.00"
     }
