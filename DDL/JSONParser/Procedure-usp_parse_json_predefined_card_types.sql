@@ -11,9 +11,9 @@ BEGIN
     SELECT type, price, max_visit_number
     FROM json_table(json_predefined_card_type, '$[*]'
                     COLUMNS (
-                        type VARCHAR(30) PATH '$.type',
-                        price DECIMAL(6, 2) PATH '$.price',
-                        max_visit_number TINYINT PATH '$.maxVisitsNumber'
+                        type             VARCHAR(30)    PATH '$.type',
+                        price            DECIMAL(6, 2)  PATH '$.price',
+                        max_visit_number TINYINT        PATH '$.maxVisitsNumber'
                         )
              ) as card_types;
 END$$
