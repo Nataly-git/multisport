@@ -55,4 +55,4 @@ BEGIN
     UPDATE user_contacts
     SET    phone_number = @phone_number
     WHERE  user_id = @user_id AND @phone_number IS NOT NULL;
-END $$
+END$$

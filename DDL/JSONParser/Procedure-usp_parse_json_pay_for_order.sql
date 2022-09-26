@@ -13,15 +13,14 @@ BEGIN
                         order_date   DATE         PATH '$.order.date',
                         order_status VARCHAR(20)  PATH '$.order.orderStatus.status',
                         user_email   VARCHAR(254) PATH '$.order.user.email'
-                        )
-                    ) AS orders
+                        )) AS orders
              LEFT JOIN order_status ON orders.order_status = order_status.status
              LEFT JOIN user ON orders.user_email = user.email;
+
     SELECT order_id
     INTO @order_id
     FROM `order`
-    WHERE `order`.date = @order_date
-      AND `order`.user_id = @user_id;
+    WHERE `order`.date = @order_date AND `order`.user_id = @user_id;
 
     UPDATE `order`
     SET `order`.status_id = @status_id
@@ -33,8 +32,7 @@ BEGIN
                     COLUMNS (
                         payment_date   DATE        PATH '$.payment.date',
                         payment_method VARCHAR(30) PATH '$.payment.method'
-                        )
-                    ) AS payments;
+                        )) AS payments;
 
     INSERT INTO payment(order_id, date, method)
         VALUE (@order_id, @payment_date, @payment_method);
@@ -48,10 +46,9 @@ BEGIN
                         number         VARCHAR(20) PATH '$.card.number',
                         start_date     DATE        PATH '$.card.startDate',
                         card_type_name VARCHAR(30) PATH '$.card.cardType.type'
-                        )
-                    ) AS card
+                        )) AS card
              LEFT JOIN card_type ON card.card_type_name = card_type.type;
 
     INSERT INTO card(number, payment_id, start_date, card_type_id)
     VALUES (@number, @payment_id, @start_date, @card_type_id);
-END $$
+END$$

@@ -34,4 +34,4 @@ BEGIN
     UPDATE sportclub_contacts
     SET    phone_number = @phone_number
     WHERE  sportclub_id = @sportclub_id AND @phone_number IS NOT NULL;
-END $$
+END$$

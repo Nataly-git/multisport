@@ -18,4 +18,4 @@ BEGIN
              LEFT JOIN activity ON sportclub_activity.activity_name = activity.name;
 
     DELETE FROM sportclub_activity WHERE sportclub_id = @sportclub_id AND activity_id = @activity_id;
-END $$
+END$$

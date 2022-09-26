@@ -16,4 +16,4 @@ BEGIN
                         max_visit_number TINYINT        PATH '$.maxVisitsNumber'
                         )
                     ) AS card_types;
-END $$
+END$$

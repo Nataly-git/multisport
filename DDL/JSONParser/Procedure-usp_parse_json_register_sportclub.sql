@@ -114,4 +114,4 @@ BEGIN
                         )
                     ) AS activities
              LEFT JOIN activity ON activities.activity_name = activity.name;
-END $$
+END$$

@@ -14,4 +14,4 @@ BEGIN
                         status VARCHAR(20) PATH '$.status'
                         )
                     ) AS order_statuses;
-END $$
+END$$

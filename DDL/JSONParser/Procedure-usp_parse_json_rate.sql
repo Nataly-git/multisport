@@ -19,4 +19,4 @@ BEGIN
                     ) AS rate_info
              LEFT JOIN sportclub ON rate_info.sportclub_email = sportclub.email
              LEFT JOIN user ON rate_info.user_email = user.email;
-END $$
+END$$

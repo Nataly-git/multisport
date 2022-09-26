@@ -19,4 +19,4 @@ BEGIN
              LEFT JOIN user ON card_order.user_email = user.email
              LEFT JOIN order_status ON card_order.order_status = order_status.status
              LEFT JOIN card_type ON card_order.card_type = card_type.type;
-END $$
+END$$

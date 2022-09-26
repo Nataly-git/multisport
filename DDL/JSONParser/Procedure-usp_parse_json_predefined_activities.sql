@@ -13,4 +13,4 @@ BEGIN
                     COLUMNS (
                         name VARCHAR(30) PATH '$.name')
                     ) AS activities;
-END $$
+END$$
