@@ -2,9 +2,9 @@ USE Multisport;
 
 DELIMITER $$
 
-DROP PROCEDURE IF EXISTS usp_parse_json_add_user;
+DROP PROCEDURE IF EXISTS usp_parse_json_register_user;
 
-CREATE PROCEDURE usp_parse_json_add_user(IN json_add_user text)
+CREATE PROCEDURE usp_parse_json_register_user(IN json_add_user text)
 
 BEGIN
     SELECT time,
@@ -25,7 +25,7 @@ BEGIN
              ) AS guest;
 
     INSERT INTO guest
-    (time,
+    (timestamp,
      browser,
      ip,
      device)
