@@ -96,57 +96,39 @@ BEGIN
             @working_hours,
             @phone_number);
 
-    INSERT INTO sportclub_card_types
-    (sportclub_id,
-     card_type_id)
+#     INSERT INTO sportclub_card_types
+#     (sportclub_id,
+#      card_type_id)
+#     WITH cte_sportclub_id AS (SELECT sportclub_id
+#                               FROM sportclub
+#                                        INNER JOIN json_table(json_add_sportclub, '$'
+#                                                              COLUMNS (
+#                                                                  email   VARCHAR(254) PATH '$.sportclub.email'
+#                                                                  )
+#                                   ) AS selected_club ON sportclub.email = selected_club.email),
+#          cte_card_type_id AS (SELECT card_type_id
+#                               FROM card_type
+#                                        INNER JOIN json_table(json_add_sportclub, '$'
+#                                                              COLUMNS (
+#                                                                  type VARCHAR(30) PATH '$.cardTypes.type'
+#                                                                  )
+#                                   ) AS selected_type ON card_type.type = selected_type.type)
+#     SELECT sportclub_id, card_type_id
+#     FROM cte_sportclub_id
+#              CROSS JOIN cte_card_type_id;
 
-    SELECT sportclub_id, card_type_id
-    FROM card_type
-    WHERE type = (
-        SELECT type
-        INTO @type
-        FROM json_table(json_add_sportclub, '$'
-                        COLUMNS(
-                            type             VARCHAR(30)  PATH '$.cardTypes.type'
-                            )
-                 )AS card_types
-    );
 
-    ;
-
-    SELECT card_type_id
-    INTO @card_type_id
-    FROM card_type
-    WHERE type = @type;
-
-    INSERT INTO sportclub_card_types
-    (sportclub_id,
-     card_type_id)
-    VALUES (@sportclub_id,
-            @card_type_id);
-
-    SELECT            acName,
-                      duration
-    INTO         @acName,
-        @duration
-    FROM json_table(json_add_sportclub, '$'
-                    COLUMNS(
-                        acName           VARCHAR(30)  PATH '$.activities.activity.name',
-                        duration         DECIMAL(3, 2)PATH '$.activities.duration'
+    SELECT s.sportclub_id,
+           c.card_type_id
+    FROM json_table(json_add_sportclub, '$[*]'
+                    COLUMNS (
+                        email VARCHAR(254) PATH '$.sportclub.email',
+                        type  VARCHAR(30)  PATH '$.cardTypes.type'
                         )
-             )AS activities;
+             ) AS card_types
+             INNER JOIN sportclub s on card_types.email = s.email
+             INNER JOIN card_type c on card_types.type = c.type;
 
-    SELECT activity_id
-    INTO @activity_id
-    FROM activity
-    WHERE name = @acName;
 
-    INSERT INTO sportclub_activity
-    (sportclub_id,
-     activity_id,
-     duration)
-    VALUES (@sportclub_id,
-            @activity_id,
-            @duration);
 
 END$$
