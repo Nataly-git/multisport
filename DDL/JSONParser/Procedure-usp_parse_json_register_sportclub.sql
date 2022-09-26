@@ -22,10 +22,10 @@ BEGIN
                         ip      VARCHAR(15)  PATH '$.guest.ipAddress',
                         device  VARCHAR(100) PATH '$.guest.device'
                         )
-             ) AS guest;
+                    ) AS guest;
 
     INSERT INTO guest
-    (timestamp,
+    (time,
      browser,
      ip,
      device)
@@ -57,7 +57,7 @@ BEGIN
                         street   VARCHAR(50)  PATH '$.sportclub.street',
                         building SMALLINT     PATH '$.sportclub.building'
                         )
-             ) AS sportclub;
+                    ) AS sportclub;
 
     INSERT INTO sportclub
     (email,
@@ -86,7 +86,7 @@ BEGIN
                         working_hours VARCHAR(255) PATH '$.contacts.workingHours',
                         phone_number  VARCHAR(20)  PATH '$.contacts.phoneNumber'
                         )
-             ) AS sportclub_contacts;
+                    ) AS sportclub_contacts;
 
     INSERT INTO sportclub_contacts
     (sportclub_id,
@@ -96,22 +96,22 @@ BEGIN
             @working_hours,
             @phone_number);
 
-
     INSERT INTO sportclub_card_types(sportclub_id, card_type_id)
     SELECT @sportclub_id, card_type_id
     FROM json_table(json_add_sportclub, '$.cardTypes[*]'
                     COLUMNS (
                         type VARCHAR(30) PATH '$.type'
-                        )) as types
+                        )
+                    ) AS types
              LEFT JOIN card_type ON types.type = card_type.type;
 
-    
     INSERT INTO sportclub_activity(sportclub_id, activity_id, duration)
     SELECT @sportclub_id, activity_id, duration
     FROM json_table(json_add_sportclub, '$.activities[*]'
                     COLUMNS (
                         activity_name VARCHAR(30)   PATH '$.activity.name',
                         duration      DECIMAL(3, 2) PATH '$.duration'
-                        )) as activities
+                        )
+                    ) AS activities
              LEFT JOIN activity ON activities.activity_name = activity.name;
 END $$

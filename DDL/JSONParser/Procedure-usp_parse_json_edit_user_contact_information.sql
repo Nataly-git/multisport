@@ -13,7 +13,7 @@ BEGIN
                     COLUMNS (
                         email VARCHAR(254) PATH '$.user.email'
                         )
-             ) AS this_user
+                    ) AS this_user
     LEFT JOIN user ON user.email = this_user.email;
 
     SELECT apartments,
@@ -34,7 +34,7 @@ BEGIN
                         building     SMALLINT    PATH '$.contacts.building',
                         phone_number VARCHAR(20) PATH '$.contacts.phoneNumber'
                         )
-             ) AS user_contacts;
+                    ) AS user_contacts;
 
     UPDATE user_contacts
     SET    apartments = @apartments
@@ -55,4 +55,4 @@ BEGIN
     UPDATE user_contacts
     SET    phone_number = @phone_number
     WHERE  user_id = @user_id AND @phone_number IS NOT NULL;
-END$$
+END $$

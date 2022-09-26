@@ -13,5 +13,5 @@ BEGIN
                     COLUMNS (
                         status VARCHAR(20) PATH '$.status'
                         )
-             ) as order_statuses;
-END$$
+                    ) AS order_statuses;
+END $$

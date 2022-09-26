@@ -22,10 +22,10 @@ BEGIN
                         ip VARCHAR(15) PATH '$.guest.ipAddress',
                         device VARCHAR(100) PATH '$.guest.device'
                         )
-             ) AS guest;
+                    ) AS guest;
 
     INSERT INTO guest
-    (timestamp,
+    (time,
      browser,
      ip,
      device)
@@ -51,7 +51,7 @@ BEGIN
                         surname VARCHAR(100) PATH '$.user.surname',
                         password VARCHAR(50) PATH '$.user.password'
                         )
-             ) AS user;
+                    ) AS user;
 
     INSERT INTO user
     (email,
@@ -85,7 +85,7 @@ BEGIN
                         building SMALLINT PATH '$.contacts.building',
                         phone_number VARCHAR(20) PATH '$.contacts.phoneNumber'
                         )
-             ) AS user_contacts;
+                    ) AS user_contacts;
 
     INSERT INTO user_contacts
     (user_id,
@@ -100,4 +100,4 @@ BEGIN
             @street,
             @building,
             @phone_number);
-END$$
+END $$

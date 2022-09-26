@@ -16,8 +16,7 @@ BEGIN
                         user_email      VARCHAR(254) PATH '$.user.email',
                         sportclub_email VARCHAR(100) PATH '$.sportClub.email'
                         )
-             ) AS rate_info
+                    ) AS rate_info
              LEFT JOIN sportclub ON rate_info.sportclub_email = sportclub.email
              LEFT JOIN user ON rate_info.user_email = user.email;
-
 END $$

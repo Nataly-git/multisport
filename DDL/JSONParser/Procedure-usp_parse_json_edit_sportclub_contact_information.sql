@@ -13,7 +13,7 @@ BEGIN
                     COLUMNS (
                         email VARCHAR(254) PATH '$.sportClub.email'
                         )
-             ) AS this_sportclub
+                    ) AS this_sportclub
              LEFT JOIN sportclub ON sportclub.email = this_sportclub.email;
 
     SELECT working_hours,
@@ -25,7 +25,7 @@ BEGIN
                         working_hours VARCHAR(255) PATH '$.contacts.workingHours',
                         phone_number  VARCHAR(20)  PATH '$.contacts.phoneNumber'
                         )
-             ) AS sportclub_contacts;
+                    ) AS sportclub_contacts;
 
     UPDATE sportclub_contacts
     SET    working_hours = @working_hours
@@ -34,5 +34,4 @@ BEGIN
     UPDATE sportclub_contacts
     SET    phone_number = @phone_number
     WHERE  sportclub_id = @sportclub_id AND @phone_number IS NOT NULL;
-
-END$$
+END $$

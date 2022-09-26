@@ -10,12 +10,13 @@ BEGIN
     SELECT user_id, `date`, status_id, card_type_id
     FROM json_table(json_create_order, '$'
                     COLUMNS (
-                        user_email VARCHAR(254) PATH '$.user.email',
-                        `date` DATE PATH '$.order.date',
-                        order_status VARCHAR(20) PATH '$.order.orderStatus.status',
-                        card_type VARCHAR(30) PATH '$.cardType.type'
-                        )) as card_order
-             left join user on card_order.user_email = user.email
-             left join order_status on card_order.order_status = order_status.status
-             left join card_type on card_order.card_type = card_type.type;
-END$$
+                        user_email   VARCHAR(254) PATH '$.user.email',
+                        `date`       DATE         PATH '$.order.date',
+                        order_status VARCHAR(20)  PATH '$.order.orderStatus.status',
+                        card_type    VARCHAR(30)  PATH '$.cardType.type'
+                        )
+                    ) AS card_order
+             LEFT JOIN user ON card_order.user_email = user.email
+             LEFT JOIN order_status ON card_order.order_status = order_status.status
+             LEFT JOIN card_type ON card_order.card_type = card_type.type;
+END $$

@@ -10,11 +10,11 @@ BEGIN
     SELECT sportclub_id, activity_id, duration
     FROM json_table(json_add_activity, '$'
                     COLUMNS (
-                        sportclubEmail VARCHAR(254) PATH '$.sportClub.email',
-                        activityName VARCHAR(30) PATH '$.activity.name',
-                        duration DECIMAL(3, 2) PATH '$.duration'
-                        )) as add_activity
-             left join sportclub on add_activity.sportclubEmail = sportclub.email
-             left join activity on add_activity.activityName = activity.name;
-END
-$$
+                        sportclubEmail VARCHAR(254)  PATH '$.sportClub.email',
+                        activityName   VARCHAR(30)   PATH '$.activity.name',
+                        duration       DECIMAL(3, 2) PATH '$.duration'
+                        )
+                    ) AS add_activity
+             LEFT JOIN sportclub ON add_activity.sportclubEmail = sportclub.email
+             LEFT JOIN activity ON add_activity.activityName = activity.name;
+END $$

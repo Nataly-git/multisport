@@ -15,5 +15,5 @@ BEGIN
                         price            DECIMAL(6, 2)  PATH '$.price',
                         max_visit_number TINYINT        PATH '$.maxVisitsNumber'
                         )
-             ) as card_types;
-END$$
+                    ) AS card_types;
+END $$

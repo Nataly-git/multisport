@@ -11,5 +11,6 @@ BEGIN
     SELECT name
     FROM json_table(json_predefined_activities, '$[*]'
                     COLUMNS (
-                        name VARCHAR(30) PATH '$.name')) as activities;
-END$$
+                        name VARCHAR(30) PATH '$.name')
+                    ) AS activities;
+END $$
