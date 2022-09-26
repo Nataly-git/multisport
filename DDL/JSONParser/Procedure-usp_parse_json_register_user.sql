@@ -25,7 +25,7 @@ BEGIN
              ) AS guest;
 
     INSERT INTO guest
-    (timestamp,
+    (time,
      browser,
      ip,
      device)

@@ -103,7 +103,7 @@ BEGIN
                     COLUMNS (
                         type VARCHAR(30) PATH '$.type'
                         )) as types
-             left join card_type on types.type = card_type.type;
+             LEFT JOIN card_type ON types.type = card_type.type;
 
     
     INSERT INTO sportclub_activity(sportclub_id, activity_id, duration)
@@ -113,5 +113,5 @@ BEGIN
                         activity_name VARCHAR(30)   PATH '$.activity.name',
                         duration      DECIMAL(3, 2) PATH '$.duration'
                         )) as activities
-             left join activity on activities.activity_name = activity.name;
+             LEFT JOIN activity ON activities.activity_name = activity.name;
 END $$
