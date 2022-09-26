@@ -17,15 +17,15 @@ BEGIN
         @device
     FROM json_table(json_add_sportclub, '$'
                     COLUMNS (
-                        time DATETIME PATH '$.guest.time',
+                        time    DATETIME     PATH '$.guest.time',
                         browser VARCHAR(100) PATH '$.guest.browser',
-                        ip VARCHAR(15) PATH '$.guest.ipAddress',
-                        device VARCHAR(100) PATH '$.guest.device'
+                        ip      VARCHAR(15)  PATH '$.guest.ipAddress',
+                        device  VARCHAR(100) PATH '$.guest.device'
                         )
              ) AS guest;
 
     INSERT INTO guest
-    (timestamp,
+    (time,
      browser,
      ip,
      device)
@@ -50,12 +50,12 @@ BEGIN
         @building
     FROM json_table(json_add_sportclub, '$'
                     COLUMNS (
-                        email VARCHAR(254) PATH '$.sportclub.email',
-                        name VARCHAR(100) PATH '$.sportclub.name',
-                        password VARCHAR(50) PATH '$.sportclub.password',
-                        city VARCHAR(50) PATH '$.sportclub.city',
-                        street VARCHAR(50) PATH '$.sportclub.street',
-                        building SMALLINT PATH '$.sportclub.building'
+                        email    VARCHAR(254) PATH '$.sportclub.email',
+                        name     VARCHAR(100) PATH '$.sportclub.name',
+                        password VARCHAR(50)  PATH '$.sportclub.password',
+                        city     VARCHAR(50)  PATH '$.sportclub.city',
+                        street   VARCHAR(50)  PATH '$.sportclub.street',
+                        building SMALLINT     PATH '$.sportclub.building'
                         )
              ) AS sportclub;
 
@@ -84,7 +84,7 @@ BEGIN
     FROM json_table(json_add_sportclub, '$'
                     COLUMNS (
                         working_hours VARCHAR(255) PATH '$.contacts.workingHours',
-                        phone_number VARCHAR(20) PATH '$.contacts.phoneNumber'
+                        phone_number  VARCHAR(20)  PATH '$.contacts.phoneNumber'
                         )
              ) AS sportclub_contacts;
 
@@ -110,9 +110,8 @@ BEGIN
     SELECT @sportclub_id, activity_id, duration
     FROM json_table(json_add_sportclub, '$.activities[*]'
                     COLUMNS (
-                        activity_name VARCHAR(30) PATH '$.activity.name',
-                        duration DECIMAL(3, 2) PATH '$.duration'
+                        activity_name VARCHAR(30)   PATH '$.activity.name',
+                        duration      DECIMAL(3, 2) PATH '$.duration'
                         )) as activities
              left join activity on activities.activity_name = activity.name;
-END
-$$
+END $$
