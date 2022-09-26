@@ -1,7 +1,7 @@
 {
   "card": {
     "number": "Plus12345",
-    "startDate": "2022-10-01",
+    "startDate": "2022-09-01",
     "cardType": {
       "type": "Multisport plus"
     }
@@ -13,13 +13,13 @@
     "user": {
       "email": "ivan_ivanov@gmail.com"
     },
-    "date": "2022-09-19",
+    "date": "2022-08-20",
     "orderStatus": {
       "status": "paid"
     }
   },
   "payment": {
-    "time": "2022-09-19 09:12:01",
+    "date": "2022-09-19",
     "method": "Card"
   }
 }
