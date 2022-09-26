@@ -28,13 +28,13 @@
   "activities": [
     {
       "activity": {
-        "acName": "gym"
+        "name": "gym"
       },
       "duration": "1.30"
     },
     {
       "activity": {
-        "acName": "sauna"
+        "name": "sauna"
       },
       "duration": "2.00"
     }
