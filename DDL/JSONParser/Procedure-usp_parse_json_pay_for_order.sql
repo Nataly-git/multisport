@@ -22,8 +22,10 @@ BEGIN
              LEFT JOIN order_status ON orders.order_status = order_status.status
              LEFT JOIN user ON orders.user_email = user.email;
 
-    SELECT order_id, card_type_id
-    INTO @order_id, @card_type_id
+    SELECT order_id,
+           card_type_id
+    INTO @order_id,
+        @card_type_id
     FROM `order`
     WHERE `order`.date = @order_date
       AND `order`.user_id = @user_id;
