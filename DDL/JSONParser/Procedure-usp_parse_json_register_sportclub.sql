@@ -96,8 +96,10 @@ BEGIN
             @working_hours,
             @phone_number);
 
-    INSERT INTO sportclub_card_types(sportclub_id, card_type_id)
-    SELECT @sportclub_id, card_type_id
+    INSERT INTO sportclub_card_types(sportclub_id,
+                                     card_type_id)
+    SELECT @sportclub_id,
+           card_type_id
     FROM json_table(json_add_sportclub, '$.cardTypes[*]'
                     COLUMNS (
                         type VARCHAR(30) PATH '$.type'
@@ -105,8 +107,12 @@ BEGIN
                     ) AS types
              LEFT JOIN card_type ON types.type = card_type.type;
 
-    INSERT INTO sportclub_activity(sportclub_id, activity_id, duration)
-    SELECT @sportclub_id, activity_id, duration
+    INSERT INTO sportclub_activity(sportclub_id,
+                                   activity_id,
+                                   duration)
+    SELECT @sportclub_id,
+           activity_id,
+           duration
     FROM json_table(json_add_sportclub, '$.activities[*]'
                     COLUMNS (
                         activity_name VARCHAR(30)   PATH '$.activity.name',

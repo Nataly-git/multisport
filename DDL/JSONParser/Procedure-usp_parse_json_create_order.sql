@@ -6,8 +6,14 @@ DROP PROCEDURE IF EXISTS usp_parse_json_create_order;
 
 CREATE PROCEDURE usp_parse_json_create_order(IN json_create_order TEXT)
 BEGIN
-    INSERT INTO `order`(user_id, date, status_id, card_type_id)
-    SELECT user_id, `date`, status_id, card_type_id
+    INSERT INTO `order`(user_id,
+                        date,
+                        status_id,
+                        card_type_id)
+    SELECT user_id,
+           `date`,
+           status_id,
+           card_type_id
     FROM json_table(json_create_order, '$'
                     COLUMNS (
                         user_email   VARCHAR(254) PATH '$.user.email',

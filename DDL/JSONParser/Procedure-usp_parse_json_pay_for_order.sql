@@ -6,8 +6,12 @@ DROP PROCEDURE IF EXISTS usp_parse_json_pay_for_order;
 
 CREATE PROCEDURE usp_parse_json_pay_for_order(IN json_pay_for_order TEXT)
 BEGIN
-    SELECT order_date, user_id, status_id
-    INTO @order_date, @user_id, @status_id
+    SELECT order_date,
+           user_id,
+           status_id
+    INTO @order_date,
+        @user_id,
+        @status_id
     FROM json_table(json_pay_for_order, '$'
                     COLUMNS (
                         order_date   DATE         PATH '$.order.date',
@@ -28,8 +32,10 @@ BEGIN
     SET `order`.status_id = @status_id
     WHERE order_id = @order_id;
 
-    SELECT payment_date, payment_method
-    INTO @payment_date, @payment_method
+    SELECT payment_date,
+           payment_method
+    INTO @payment_date,
+        @payment_method
     FROM json_table(json_pay_for_order, '$'
                     COLUMNS (
                         payment_date   DATE        PATH '$.payment.date',
@@ -37,13 +43,19 @@ BEGIN
                         )
                     ) AS payments;
 
-    INSERT INTO payment(order_id, date, method)
-        VALUE (@order_id, @payment_date, @payment_method);
+    INSERT INTO payment(order_id,
+                        date,
+                        method)
+        VALUE (@order_id,
+               @payment_date,
+               @payment_method);
 
     SELECT LAST_INSERT_ID() INTO @payment_id;
 
-    SELECT number, start_date
-    INTO @number, @start_date
+    SELECT number,
+           start_date
+    INTO @number,
+        @start_date
     FROM json_table(json_pay_for_order, '$'
                     COLUMNS (
                         number         VARCHAR(20) PATH '$.card.number',
@@ -51,6 +63,12 @@ BEGIN
                         )
                     ) AS paid_card;
 
-    INSERT INTO card(number, payment_id, start_date, card_type_id)
-        VALUE (@number, @payment_id, @start_date, @card_type_id);
+    INSERT INTO card(number,
+                     payment_id,
+                     start_date,
+                     card_type_id)
+        VALUE (@number,
+               @payment_id,
+               @start_date,
+               @card_type_id);
 END$$
