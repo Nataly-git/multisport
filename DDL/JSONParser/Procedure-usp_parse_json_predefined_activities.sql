@@ -9,7 +9,7 @@ CREATE PROCEDURE usp_parse_json_predefined_activities(IN json_predefined_activit
 BEGIN
     INSERT INTO activity(name)
     SELECT name
-    FROM json_table(json_predefined_activities, '$[*]'
+    FROM   json_table(json_predefined_activities, '$[*]'
                     COLUMNS (
                         name VARCHAR(30) PATH '$.name')
                     ) AS activities;

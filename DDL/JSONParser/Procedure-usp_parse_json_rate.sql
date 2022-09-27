@@ -7,15 +7,16 @@ DROP PROCEDURE IF EXISTS usp_parse_json_rate;
 CREATE PROCEDURE usp_parse_json_rate(IN json_rate text)
 
 BEGIN
-    INSERT INTO rating (user_id,
-                        sportclub_id,
-                        rate,
-                        comment)
+    INSERT INTO rating (
+            user_id,
+            sportclub_id,
+            rate,
+            comment)
     SELECT  user_id,
             sportclub_id,
             rate,
             comment
-    FROM json_table(json_rate, '$'
+    FROM    json_table(json_rate, '$'
                     COLUMNS (
                         rate            TINYINT      PATH '$.rating.rate',
                         comment         VARCHAR(255) PATH '$.rating.comment',

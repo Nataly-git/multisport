@@ -7,15 +7,15 @@ DROP PROCEDURE IF EXISTS usp_parse_json_register_user;
 CREATE PROCEDURE usp_parse_json_register_user(IN json_add_user text)
 
 BEGIN
-    SELECT time,
-           browser,
-           ip,
-           device
-    INTO @time,
-        @browser,
-        @ip,
-        @device
-    FROM json_table(json_add_user, '$'
+    SELECT  time,
+            browser,
+            ip,
+            device
+    INTO    @time,
+            @browser,
+            @ip,
+            @device
+    FROM    json_table(json_add_user, '$'
                     COLUMNS (
                         time    DATETIME     PATH '$.guest.time',
                         browser VARCHAR(100) PATH '$.guest.browser',
@@ -24,11 +24,11 @@ BEGIN
                         )
                     ) AS guest;
 
-    INSERT INTO guest
-    (time,
-     browser,
-     ip,
-     device)
+    INSERT INTO guest(
+            time,
+            browser,
+            ip,
+            device)
     VALUES (@time,
             @browser,
             @ip,
@@ -36,14 +36,14 @@ BEGIN
 
     SELECT last_insert_id() INTO @guest_id;
 
-    SELECT email,
-           name,
-           surname,
-           password
-    INTO @email,
-        @name,
-        @surname,
-        @password
+    SELECT  email,
+            name,
+            surname,
+            password
+    INTO    @email,
+            @name,
+            @surname,
+            @password
     FROM json_table(json_add_user, '$'
                     COLUMNS (
                         email    VARCHAR(254) PATH '$.user.email',
@@ -53,12 +53,12 @@ BEGIN
                         )
                     ) AS user;
 
-    INSERT INTO user
-    (email,
-     name,
-     surname,
-     password,
-     guest_id)
+    INSERT INTO user(
+            email,
+            name,
+            surname,
+            password,
+            guest_id)
     VALUES (@email,
             @name,
             @surname,
@@ -67,16 +67,16 @@ BEGIN
 
     SELECT last_insert_id() INTO @user_id;
 
-    SELECT apartments,
-           city,
-           street,
-           building,
-           phone_number
-    INTO @apartments,
-        @city,
-        @street,
-        @building,
-        @phone_number
+    SELECT  apartments,
+            city,
+            street,
+            building,
+            phone_number
+    INTO    @apartments,
+            @city,
+            @street,
+            @building,
+            @phone_number
     FROM json_table(json_add_user, '$'
                     COLUMNS (
                         apartments   SMALLINT    PATH '$.contacts.apartments',
@@ -87,13 +87,13 @@ BEGIN
                         )
                     ) AS user_contacts;
 
-    INSERT INTO user_contacts
-    (user_id,
-     apartments,
-     city,
-     street,
-     building,
-     phone_number)
+    INSERT INTO user_contacts(
+            user_id,
+            apartments,
+            city,
+            street,
+            building,
+            phone_number)
     VALUES (@user_id,
             @apartments,
             @city,

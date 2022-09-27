@@ -8,9 +8,9 @@ CREATE PROCEDURE usp_parse_json_remove_activity(IN json_remove_activity TEXT)
 BEGIN
     SELECT sportclub_id,
            activity_id
-    INTO @sportclub_id,
-        @activity_id
-    FROM json_table(json_remove_activity, '$'
+    INTO   @sportclub_id,
+           @activity_id
+    FROM   json_table(json_remove_activity, '$'
                     COLUMNS (
                         sportclub_email VARCHAR(254) PATH '$.sportClub.email',
                         activity_name   VARCHAR(30)  PATH '$.activity.name'
@@ -20,5 +20,6 @@ BEGIN
              LEFT JOIN activity ON sportclub_activity.activity_name = activity.name;
 
     DELETE FROM sportclub_activity
-           WHERE sportclub_id = @sportclub_id AND activity_id = @activity_id;
+           WHERE sportclub_id = @sportclub_id
+             AND activity_id = @activity_id;
 END$$
