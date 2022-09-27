@@ -34,7 +34,7 @@ BEGIN
             @ip,
             @device);
 
-    SELECT LAST_INSERT_ID() INTO @guest_id;
+    SELECT last_insert_id() INTO @guest_id;
 
     SELECT email,
            name,
@@ -65,7 +65,7 @@ BEGIN
             @password,
             @guest_id);
 
-    SELECT LAST_INSERT_ID() INTO @user_id;
+    SELECT last_insert_id() INTO @user_id;
 
     SELECT apartments,
            city,

@@ -34,7 +34,7 @@ BEGIN
             @ip,
             @device);
 
-    SELECT LAST_INSERT_ID() INTO @guest_id;
+    SELECT last_insert_id() INTO @guest_id;
 
     SELECT email,
            name,
@@ -75,7 +75,7 @@ BEGIN
             @building,
             @guest_id);
 
-    SELECT LAST_INSERT_ID() INTO @sportclub_id;
+    SELECT last_insert_id() INTO @sportclub_id;
 
     SELECT working_hours,
            phone_number

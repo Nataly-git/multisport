@@ -52,7 +52,7 @@ BEGIN
                @payment_date,
                @payment_method);
 
-    SELECT LAST_INSERT_ID() INTO @payment_id;
+    SELECT last_insert_id() INTO @payment_id;
 
     SELECT number,
            start_date
