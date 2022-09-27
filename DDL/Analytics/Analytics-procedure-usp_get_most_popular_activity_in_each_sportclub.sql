@@ -14,7 +14,7 @@ BEGIN
                    LEFT JOIN sportclub s ON sa.sportclub_id = s.sportclub_id
                    LEFT JOIN activity a ON sa.activity_id = a.activity_id
           GROUP BY s.name, a.name
-          ORDER BY visits_number DESC) AS snanvn
+          ORDER BY visits_number DESC) AS visits
     GROUP BY sportclub_name
     ORDER BY sportclub_name;
 END$$;
