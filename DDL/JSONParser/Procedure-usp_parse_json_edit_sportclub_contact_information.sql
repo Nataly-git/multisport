@@ -28,12 +28,8 @@ BEGIN
                     ) AS sportclub_contacts;
 
     UPDATE sportclub_contacts
-    SET    working_hours = @working_hours
-    WHERE  sportclub_id = @sportclub_id
-      AND  @working_hours IS NOT NULL;
+    SET    working_hours = IF(@working_hours IS NOT NULL, @working_hours, working_hours),
+           phone_number = IF(@phone_number IS NOT NULL, @phone_number, phone_number)
+    WHERE  sportclub_id = @sportclub_id;
 
-    UPDATE sportclub_contacts
-    SET    phone_number = @phone_number
-    WHERE  sportclub_id = @sportclub_id
-      AND  @phone_number IS NOT NULL;
 END$$

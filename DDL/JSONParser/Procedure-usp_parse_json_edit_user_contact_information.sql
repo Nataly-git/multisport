@@ -37,22 +37,10 @@ BEGIN
                     ) AS user_contacts;
 
     UPDATE user_contacts
-    SET    apartments = @apartments
-    WHERE  user_id = @user_id AND @apartments IS NOT NULL;
-
-    UPDATE user_contacts
-    SET    city = @city
-    WHERE  user_id = @user_id AND @city IS NOT NULL;
-
-    UPDATE user_contacts
-    SET    street = @street
-    WHERE  user_id = @user_id AND @street IS NOT NULL;
-
-    UPDATE user_contacts
-    SET    building = @building
-    WHERE  user_id = @user_id AND @building IS NOT NULL;
-
-    UPDATE user_contacts
-    SET    phone_number = @phone_number
-    WHERE  user_id = @user_id AND @phone_number IS NOT NULL;
+    SET    apartments = IF(@apartments IS NOT NULL, @apartments, apartments,
+           city = IF(@city IS NOT NULL, @city, city),
+           street = IF(@street IS NOT NULL, @street, street),
+           building = IF(@building IS NOT NULL, @building, building),
+           phone_number = IF(@phone_number IS NOT NULL, @phone_number, phone_number);
+    WHERE  user_id = @user_id;
 END$$

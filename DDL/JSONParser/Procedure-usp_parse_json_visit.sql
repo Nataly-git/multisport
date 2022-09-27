@@ -26,6 +26,11 @@ BEGIN
              LEFT JOIN activity ON user_visit.activityName = activity.name
              LEFT JOIN card ON user_visit.card_number = card.number;
 
+    SELECT card_type_id
+    INTO   @card_type_id
+    FROM   `order`
+    LEFT JOIN card c ON `order`.card_type_id = c.card_type_id;
+
     SELECT sportclub_activity_id
     INTO   @sportclub_activity_id
     FROM   sportclub_activity
