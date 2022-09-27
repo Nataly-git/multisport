@@ -1,10 +1,7 @@
 {
   "card": {
     "number": "Light12346",
-    "startDate": "2022-10-01",
-    "cardType": {
-      "type": "Multisport light"
-    }
+    "startDate": "2022-10-01"
   },
   "order": {
     "user": {

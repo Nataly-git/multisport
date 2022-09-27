@@ -3,10 +3,7 @@ USE Multisport;
 CALL usp_parse_json_pay_for_order('{
   "card": {
     "number": "Light12345",
-    "startDate": "2022-09-01",
-    "cardType": {
-      "type": "Multisport light"
-    }
+    "startDate": "2022-09-01"
   },
   "order": {
     "user": {
@@ -26,10 +23,7 @@ CALL usp_parse_json_pay_for_order('{
 CALL usp_parse_json_pay_for_order('{
   "card": {
     "number": "Light12346",
-    "startDate": "2022-10-01",
-    "cardType": {
-      "type": "Multisport light"
-    }
+    "startDate": "2022-10-01"
   },
   "order": {
     "user": {
@@ -49,10 +43,7 @@ CALL usp_parse_json_pay_for_order('{
 CALL usp_parse_json_pay_for_order('{
   "card": {
     "number": "Plus12345",
-    "startDate": "2022-09-01",
-    "cardType": {
-      "type": "Multisport plus"
-    }
+    "startDate": "2022-09-01"
   },
   "order": {
     "user": {
@@ -72,10 +63,7 @@ CALL usp_parse_json_pay_for_order('{
 CALL usp_parse_json_pay_for_order('{
   "card": {
     "number": "Classic12345",
-    "startDate": "2022-10-01",
-    "cardType": {
-      "type": "Multisport classic"
-    }
+    "startDate": "2022-10-01"
   },
   "order": {
     "user": {

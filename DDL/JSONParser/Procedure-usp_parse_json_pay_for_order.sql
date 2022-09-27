@@ -18,8 +18,8 @@ BEGIN
              LEFT JOIN order_status ON orders.order_status = order_status.status
              LEFT JOIN user ON orders.user_email = user.email;
 
-    SELECT order_id
-    INTO @order_id
+    SELECT order_id, card_type_id
+    INTO @order_id, @card_type_id
     FROM `order`
     WHERE `order`.date = @order_date
       AND `order`.user_id = @user_id;
@@ -42,16 +42,14 @@ BEGIN
 
     SELECT LAST_INSERT_ID() INTO @payment_id;
 
-    SELECT number, start_date, card_type_id
-    INTO @number, @start_date, @card_type_id
+    SELECT number, start_date
+    INTO @number, @start_date
     FROM json_table(json_pay_for_order, '$'
                     COLUMNS (
                         number         VARCHAR(20) PATH '$.card.number',
-                        start_date     DATE        PATH '$.card.startDate',
-                        card_type_name VARCHAR(30) PATH '$.card.cardType.type'
+                        start_date     DATE        PATH '$.card.startDate'
                         )
-                    ) AS paid_card
-             LEFT JOIN card_type ON paid_card.card_type_name = card_type.type;
+                    ) AS paid_card;
 
     INSERT INTO card(number, payment_id, start_date, card_type_id)
         VALUE (@number, @payment_id, @start_date, @card_type_id);

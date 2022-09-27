@@ -2,9 +2,6 @@
   "card": {
     "number": "Plus12345",
     "startDate": "2022-09-01",
-    "cardType": {
-      "type": "Multisport plus"
-    }
   },
   "order": {
     "user": {

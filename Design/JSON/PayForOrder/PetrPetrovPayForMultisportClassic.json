@@ -1,10 +1,7 @@
 {
   "card": {
     "number": "Classic12345",
-    "startDate": "2022-10-01",
-    "cardType": {
-      "type": "Multisport classic"
-    }
+    "startDate": "2022-10-01"
   },
   "order": {
     "user": {
