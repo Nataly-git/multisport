@@ -8,8 +8,8 @@ CREATE PROCEDURE usp_parse_json_edit_user_contact_information(IN json_edit_user_
 
 BEGIN
     SELECT user_id
-    INTO @user_id
-    FROM json_table(json_edit_user_contact_information, '$'
+    INTO   @user_id
+    FROM   json_table(json_edit_user_contact_information, '$'
                     COLUMNS (
                         email VARCHAR(254) PATH '$.user.email'
                         )
@@ -21,12 +21,12 @@ BEGIN
            street,
            building,
            phone_number
-    INTO @apartments,
-        @city,
-        @street,
-        @building,
-        @phone_number
-    FROM json_table(json_edit_user_contact_information, '$'
+    INTO   @apartments,
+           @city,
+           @street,
+           @building,
+           @phone_number
+    FROM   json_table(json_edit_user_contact_information, '$'
                     COLUMNS (
                         apartments   SMALLINT    PATH '$.contacts.apartments',
                         city         VARCHAR(50) PATH '$.contacts.city',
