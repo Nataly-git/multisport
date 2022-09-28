@@ -85,19 +85,10 @@ BEGIN
             cte_guest.guest_id
     FROM cte_guest;
 
-
     SELECT sportclub_id
     INTO @sportclub_id
     FROM sportclub
     WHERE email = @email;
-#     INSERT INTO @sportclub_id
-#     WITH cte_sportclubInfo AS(
-#         SELECT sportclub_id
-#         FROM sportclub
-#         WHERE email = @email
-#     )
-#     SELECT sportclub_id
-#     FROM cte_sportclubInfo;
 
     INSERT INTO sportclub_contacts (
             sportclub_id,
