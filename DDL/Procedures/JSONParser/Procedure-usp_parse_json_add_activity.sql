@@ -20,6 +20,6 @@ BEGIN
                         duration       DECIMAL(3, 2) PATH '$.duration'
                         )
                     ) AS add_activity
-             LEFT JOIN sportclub ON add_activity.sportclubEmail = sportclub.email
-             LEFT JOIN activity ON add_activity.activityName = activity.name;
+             JOIN sportclub ON add_activity.sportclubEmail = sportclub.email
+             JOIN activity ON add_activity.activityName = activity.name;
 END$$

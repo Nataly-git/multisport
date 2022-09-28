@@ -65,6 +65,27 @@ CALL usp_parse_json_register_user('{
   }
 }');
 
+CALL usp_parse_json_register_user('{
+  "guest": {
+    "time": "2022-07-22 10:41:12",
+    "browser": "Safari",
+    "ipAddress": "162.192.0.5",
+    "device": "Iphone 4"
+  },
+  "user": {
+    "email": "grisga_rulit@mail.ru",
+    "name": "Grisha",
+    "surname": "Vasechkin",
+    "password": "mojpass"
+  },
+  "contacts": {
+    "city": "Minsk",
+    "street": "Loshitskaja",
+    "building": "2",
+    "phoneNumber": "+641654148"
+  }
+}');
+
 
 -- not executed
 CALL usp_parse_json_register_user('{

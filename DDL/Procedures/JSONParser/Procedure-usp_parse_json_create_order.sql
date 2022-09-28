@@ -23,7 +23,7 @@ BEGIN
                         card_type    VARCHAR(30)  PATH '$.cardType.type'
                         )
                     ) AS card_order
-             LEFT JOIN user ON card_order.user_email = user.email
-             LEFT JOIN order_status ON card_order.order_status = order_status.status
-             LEFT JOIN card_type ON card_order.card_type = card_type.type;
+             JOIN user ON card_order.user_email = user.email
+             JOIN order_status ON card_order.order_status = order_status.status
+             JOIN card_type ON card_order.card_type = card_type.type;
 END$$
