@@ -20,10 +20,7 @@ BEGIN
            street,
            building,
            working_hours,
-           phone_number,
-           card_type_id,
-           activity_id,
-           duration
+           phone_number
     INTO   @time,
            @browser,
            @ip,
@@ -35,10 +32,7 @@ BEGIN
            @street,
            @building,
            @working_hours,
-           @phone_number,
-           @card_type_id,
-           @activity_id,
-           @duration
+           @phone_number
     FROM   json_table(json_add_sportclub, '$'
                     COLUMNS (
                         time            DATETIME      PATH '$.guest.time',
@@ -52,14 +46,9 @@ BEGIN
                         street          VARCHAR(50)   PATH '$.sportclub.street',
                         building        SMALLINT      PATH '$.sportclub.building',
                         working_hours   VARCHAR(255)  PATH '$.contacts.workingHours',
-                        phone_number    VARCHAR(20)   PATH '$.contacts.phoneNumber',
-                        type            VARCHAR(30)   PATH '$.cardTypes.type',
-                        activity_name   VARCHAR(30)   PATH '$.activities.activity.name',
-                        duration        DECIMAL(3, 2) PATH '$.activities.duration'
+                        phone_number    VARCHAR(20)   PATH '$.contacts.phoneNumber'
                         )
-                    ) AS register_info
-               JOIN card_type ON register_info.type = card_type.type
-               JOIN activity ON register_info.activity_name = activity.name;
+                    ) AS register_info;
 
     INSERT INTO guest (
             time,
@@ -71,8 +60,6 @@ BEGIN
             @ip,
             @device);
 
-    SELECT last_insert_id() INTO @guest_id;
-
     INSERT INTO sportclub (
             email,
             name,
@@ -81,15 +68,36 @@ BEGIN
             street,
             building,
             guest_id)
-    VALUES (@email,
+    WITH cte_guest AS(
+        SELECT guest_id
+        FROM guest
+        WHERE guest.time = @time
+          AND guest.browser = @browser
+          AND guest.device = @device
+          AND guest.ip = @ip
+    )
+    SELECT  @email,
             @name,
             @password,
             @city,
             @street,
             @building,
-            @guest_id);
+            cte_guest.guest_id
+    FROM cte_guest;
 
-    SELECT last_insert_id() INTO @sportclub_id;
+
+    SELECT sportclub_id
+    INTO @sportclub_id
+    FROM sportclub
+    WHERE email = @email;
+#     INSERT INTO @sportclub_id
+#     WITH cte_sportclubInfo AS(
+#         SELECT sportclub_id
+#         FROM sportclub
+#         WHERE email = @email
+#     )
+#     SELECT sportclub_id
+#     FROM cte_sportclubInfo;
 
     INSERT INTO sportclub_contacts (
             sportclub_id,
@@ -100,18 +108,31 @@ BEGIN
             @phone_number);
 
     INSERT INTO sportclub_card_types(
-            sportclub_id,
-            card_type_id)
+        sportclub_id,
+        card_type_id)
     SELECT  @sportclub_id,
-            @card_type_id;
+            card_type_id
+    FROM    json_table(json_add_sportclub, '$.cardTypes[*]'
+                       COLUMNS (
+                           type VARCHAR(30) PATH '$.type'
+                           )
+                ) AS types
+                   JOIN card_type ON types.type = card_type.type;
 
     INSERT INTO sportclub_activity(
-            sportclub_id,
-            activity_id,
-            duration)
+        sportclub_id,
+        activity_id,
+        duration)
     SELECT  @sportclub_id,
-            @activity_id,
-            @duration;
+            activity_id,
+            duration
+    FROM    json_table(json_add_sportclub, '$.activities[*]'
+                       COLUMNS (
+                           activity_name VARCHAR(30)   PATH '$.activity.name',
+                           duration      DECIMAL(3, 2) PATH '$.duration'
+                           )
+                ) AS activities
+                   JOIN activity ON activities.activity_name = activity.name;
 
     COMMIT;
 END$$

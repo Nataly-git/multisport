@@ -88,22 +88,22 @@ CALL usp_parse_json_register_sportclub('{
 
 CALL usp_parse_json_register_sportclub('{
   "guest": {
-    "time": "2021-05-11 06:44:18",
+    "time": "2021-05-12 06:44:18",
     "browser": "MOZZilla",
-    "ipAddress": "162.192.0.5",
-    "device": "Lenovo 5032"
+    "ipAddress": "162.192.0.2",
+    "device": "Lenovo 502"
   },
   "sportclub": {
-    "email": "swim@gmail.com",
-    "name": "Swimming pool",
+    "email": "swimmmmm@gmail.com",
+    "name": "Newclub",
     "password": "pass1",
     "city": "Minsk",
-    "street": "Olshevskogo",
+    "street": "SomeStreet",
     "building": "1"
   },
   "contacts": {
     "workingHours": "From 8 am to 12 pm",
-    "phoneNumber": "+3752988995533"
+    "phoneNumber": "+5158198196"
   },
   "cardTypes": [
     {
@@ -204,4 +204,7 @@ CALL usp_parse_json_register_sportclub('{
   ]
 }');
 
-
+delete from sportclub_card_types where sportclub_id = 36;
+delete from sportclub_activity where sportclub_id = 36;
+delete from sportclub_contacts where sportclub_id = 36;
+delete from sportclub where sportclub_id = 36;
