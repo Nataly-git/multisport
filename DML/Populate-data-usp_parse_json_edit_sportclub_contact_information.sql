@@ -5,7 +5,7 @@ CALL usp_parse_json_edit_sportclub_contact_information('{
     "email": "gym24@gmail.com"
   },
   "contacts": {
-    "workingHours": "From 6 am to 10 pm"
+    "workingHours": "From 12 am to 10 pm"
   }
 }');
 

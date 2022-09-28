@@ -16,6 +16,6 @@ CALL usp_parse_json_edit_user_contact_information('{
     "email": "ivan_ivanov@gmail.com"
   },
   "contacts": {
-    "phoneNumber": "+321456987"
+    "phoneNumber": "+100770922"
   }
 }');
