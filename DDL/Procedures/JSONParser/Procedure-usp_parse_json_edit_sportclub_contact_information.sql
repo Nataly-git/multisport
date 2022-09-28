@@ -7,13 +7,13 @@ DROP PROCEDURE IF EXISTS usp_parse_json_edit_sportclub_contact_information;
 CREATE PROCEDURE usp_parse_json_edit_sportclub_contact_information(IN json_edit_sportclub_contact_information text)
 
 BEGIN
-    with cte_contacts_info as(
-    SELECT sportclub_id,
-           working_hours,
-           phone_number
-    FROM   json_table(json_edit_sportclub_contact_information, '$'
+    WITH cte_contacts_info AS(
+        SELECT sportclub_id,
+               working_hours,
+               phone_number
+        FROM   json_table(json_edit_sportclub_contact_information, '$'
                     COLUMNS (
-                        email VARCHAR(254) PATH '$.sportClub.email',
+                        email         VARCHAR(254) PATH '$.sportClub.email',
                         working_hours VARCHAR(255) PATH '$.contacts.workingHours',
                         phone_number  VARCHAR(20)  PATH '$.contacts.phoneNumber'
                         )

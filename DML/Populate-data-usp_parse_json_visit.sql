@@ -126,6 +126,42 @@ CALL usp_parse_json_visit('{
   }
 }');
 
+CALL usp_parse_json_visit('{
+  "visit": {
+    "dateTime": "2022-10-07 12:40:55"
+  },
+  "sportClub": {
+    "email": "gym24@gmail.com"
+  },
+  "activity": {
+    "name": "sauna"
+  },
+  "card": {
+    "number": "Classic12345"
+  },
+  "user": {
+    "email": "petr_petrov@gmail.com"
+  }
+}');
+
+CALL usp_parse_json_visit('{
+  "visit": {
+    "dateTime": "2022-10-07 12:40:55"
+  },
+  "sportClub": {
+    "email": "gym24@gmail.com"
+  },
+  "activity": {
+    "name": "sauna"
+  },
+  "card": {
+    "number": "Classic12345"
+  },
+  "user": {
+    "email": "petr_petrov@gmail.com"
+  }
+}');
+
 
 -- not executed
 CALL usp_parse_json_visit('{

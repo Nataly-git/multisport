@@ -8,13 +8,13 @@ CREATE PROCEDURE usp_parse_json_edit_user_contact_information(IN json_edit_user_
 
 BEGIN
     WITH   cte_contacts_info AS(
-    SELECT user_id,
-           apartments,
-           city,
-           street,
-           building,
-           phone_number
-    FROM   json_table(json_edit_user_contact_information, '$'
+        SELECT user_id,
+               apartments,
+               city,
+               street,
+               building,
+               phone_number
+        FROM   json_table(json_edit_user_contact_information, '$'
                     COLUMNS (
                         email VARCHAR(254) PATH '$.user.email',
                         apartments   SMALLINT    PATH '$.contacts.apartments',
