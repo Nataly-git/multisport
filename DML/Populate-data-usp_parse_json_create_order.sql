@@ -59,3 +59,18 @@ CALL usp_parse_json_create_order('{
     "type": "Multisport classic"
   }
 }');
+
+CALL usp_parse_json_create_order('{
+  "order": {
+    "date": "2022-09-28",
+    "orderStatus": {
+      "status": "created"
+    }
+  },
+  "user": {
+    "email": "grisga_rulit@mail.ru"
+  },
+  "cardType": {
+    "type": "Multisport plus"
+  }
+}');

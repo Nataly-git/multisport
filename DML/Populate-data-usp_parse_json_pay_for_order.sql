@@ -79,3 +79,23 @@ CALL usp_parse_json_pay_for_order('{
     "method": "Card"
   }
 }');
+
+CALL usp_parse_json_pay_for_order('{
+  "card": {
+    "number": "Plus5416",
+    "startDate": "2022-10-01"
+  },
+  "order": {
+    "user": {
+      "email": "grisga_rulit@mail.ru"
+    },
+    "date": "2022-09-28",
+    "orderStatus": {
+      "status": "paid"
+    }
+  },
+  "payment": {
+    "date": "2022-09-28",
+    "method": "Cash"
+  }
+}');
