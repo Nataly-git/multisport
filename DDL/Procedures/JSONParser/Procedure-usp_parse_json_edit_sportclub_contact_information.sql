@@ -4,7 +4,7 @@ DELIMITER $$
 
 DROP PROCEDURE IF EXISTS usp_parse_json_edit_sportclub_contact_information;
 
-CREATE PROCEDURE usp_parse_json_edit_sportclub_contact_information(IN json_edit_sportclub_contact_information text)
+CREATE PROCEDURE usp_parse_json_edit_sportclub_contact_information(IN json_edit_sportclub_contact_information TEXT)
 
 BEGIN
     WITH cte_contacts_info AS(

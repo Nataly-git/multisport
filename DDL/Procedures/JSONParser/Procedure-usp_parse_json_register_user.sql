@@ -4,7 +4,7 @@ DELIMITER $$
 
 DROP PROCEDURE IF EXISTS usp_parse_json_register_user;
 
-CREATE PROCEDURE usp_parse_json_register_user(IN json_add_user text)
+CREATE PROCEDURE usp_parse_json_register_user(IN json_add_user TEXT)
 
 BEGIN
     START TRANSACTION;

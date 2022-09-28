@@ -4,7 +4,7 @@ DELIMITER $$
 
 DROP PROCEDURE IF EXISTS usp_parse_json_register_sportclub;
 
-CREATE PROCEDURE usp_parse_json_register_sportclub(IN json_add_sportclub text)
+CREATE PROCEDURE usp_parse_json_register_sportclub(IN json_add_sportclub TEXT)
 
 BEGIN
     START TRANSACTION;

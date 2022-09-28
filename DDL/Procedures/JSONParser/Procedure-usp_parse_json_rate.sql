@@ -4,7 +4,7 @@ DELIMITER $$
 
 DROP PROCEDURE IF EXISTS usp_parse_json_rate;
 
-CREATE PROCEDURE usp_parse_json_rate(IN json_rate text)
+CREATE PROCEDURE usp_parse_json_rate(IN json_rate TEXT)
 
 BEGIN
     INSERT INTO rating (
