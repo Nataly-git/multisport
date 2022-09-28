@@ -35,7 +35,5 @@ BEGIN
              JOIN sportclub_activity ON cte_user_visit.sportclub_id = sportclub_activity.sportclub_id
                 AND cte_user_visit.activity_id = sportclub_activity.activity_id
              JOIN sportclub_card_types ON cte_user_visit.sportclub_id = sportclub_card_types.sportclub_id
-                AND cte_user_visit.card_type_id = sportclub_card_types.card_type_id
-    WHERE cte_user_visit.sportclub_id = sportclub_card_types.sportclub_id
-      AND cte_user_visit.card_type_id = sportclub_card_types.card_type_id;
+                AND cte_user_visit.card_type_id = sportclub_card_types.card_type_id;
 END$$
