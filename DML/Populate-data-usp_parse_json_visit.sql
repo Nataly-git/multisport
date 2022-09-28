@@ -162,6 +162,42 @@ CALL usp_parse_json_visit('{
   }
 }');
 
+CALL usp_parse_json_visit('{
+  "visit": {
+    "dateTime": "2022-09-07 12:40:55"
+  },
+  "sportClub": {
+    "email": "xfit_gym@gmail.com"
+  },
+  "activity": {
+    "name": "aerobics"
+  },
+  "card": {
+    "number": "Light12346"
+  },
+  "user": {
+    "email": "anton_antonov@gmail.com"
+  }
+}');
+
+CALL usp_parse_json_visit('{
+  "visit": {
+    "dateTime": "2022-10-08 12:40:55"
+  },
+  "sportClub": {
+    "email": "xfit_gym@gmail.com"
+  },
+  "activity": {
+    "name": "tennis"
+  },
+  "card": {
+    "number": "Light12346"
+  },
+  "user": {
+    "email": "anton_antonov@gmail.com"
+  }
+}');
+
 
 -- not executed
 CALL usp_parse_json_visit('{
