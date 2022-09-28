@@ -31,9 +31,9 @@ BEGIN
     SELECT            card_id,
                       sportclub_activity_id,
                       date_time
-    FROM              cte_user_visit
-             JOIN sportclub_activity ON cte_user_visit.sportclub_id = sportclub_activity.sportclub_id
-                AND cte_user_visit.activity_id = sportclub_activity.activity_id
-             JOIN sportclub_card_types ON cte_user_visit.sportclub_id = sportclub_card_types.sportclub_id
-                AND cte_user_visit.card_type_id = sportclub_card_types.card_type_id;
+    FROM              cte_user_visit cte
+             JOIN sportclub_activity sa ON cte.sportclub_id = sa.sportclub_id
+                AND cte_user_visit.activity_id = sa.activity_id
+             JOIN sportclub_card_types ct ON cte.sportclub_id = ct.sportclub_id
+                AND cte.card_type_id = ct.card_type_id;
 END$$
