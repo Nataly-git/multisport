@@ -4,7 +4,7 @@ DELIMITER $$
 
 DROP PROCEDURE IF EXISTS usp_get_card_types_percentage_for_each_sportclub;
 
-CREATE PROCEDURE usp_get_card_types_percentage_for_each_sportclub()
+CREATE PROCEDURE usp_get_card_types_percentage_for_each_sportclub(IN month_number TINYINT, IN year_number SMALLINT)
 BEGIN
     WITH cte_card_type_visits AS (
         SELECT sa.sportclub_id,
@@ -14,6 +14,8 @@ BEGIN
             JOIN sportclub_activity sa ON visit.sportclub_activity_id = sa.sportclub_activity_id
             JOIN card c ON c.card_id = visit.card_id
             JOIN card_type ct ON ct.card_type_id = c.card_type_id
+        WHERE  MONTH(date_time)=month_number
+        AND    YEAR(date_time)=year_number
         GROUP BY sa.sportclub_id,
                  c.card_type_id
         ),
@@ -24,6 +26,8 @@ BEGIN
         FROM   visit
             JOIN sportclub_activity sa ON visit.sportclub_activity_id = sa.sportclub_activity_id
             JOIN sportclub s ON s.sportclub_id = sa.sportclub_id
+        WHERE  MONTH(date_time)=month_number
+          AND    YEAR(date_time)=year_number
         GROUP BY s.name
         )
     SELECT sportclub.name,
