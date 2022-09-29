@@ -6,21 +6,24 @@ DROP PROCEDURE IF EXISTS usp_get_card_types_orders_percentage;
 
 CREATE PROCEDURE usp_get_card_types_orders_percentage(IN month_number TINYINT, IN year_number SMALLINT)
 BEGIN
-    SET @prev_month = IF(month_number = 1, 12, month_number - 1);
-    SET @prev_year = IF(month_number = 1, year_number - 1, year_number);
+    WITH cte_parameters AS(
+        SELECT IF(month_number = 1, 12, month_number - 1) prev_month,
+               IF(month_number = 1, year_number - 1, year_number) prev_year
+    ),
 
-    WITH cte_all_orders_in_prev_month AS(
-        SELECT count_all_paid_orders(@prev_month,
-                                     @prev_year
+    cte_all_orders_in_prev_month AS(
+        SELECT count_all_paid_orders(cte_parameters.prev_month,
+                                     cte_parameters.prev_year
             ) AS all_paid_orders
+        FROM cte_parameters
         ),
     cte_orders_in_prev_month AS(
         SELECT card_type.type,
-               count_card_type_number(@prev_month,
-                                      @prev_year,
+               count_card_type_number(cte_parameters.prev_month,
+                                      cte_parameters.prev_year,
                                       card_type.type
              ) AS number_of_orders
-        FROM card_type
+        FROM card_type, cte_parameters
         ),
     cte_prev_month_stat AS(
         SELECT card_type.type,
