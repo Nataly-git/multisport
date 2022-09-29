@@ -26,7 +26,6 @@ BEGIN
         WHERE ct.type = card_type_name
         GROUP BY sportclub_id
         )
-
     SELECT `Sportclub name`,
            `Average sportclub rate`,
            `Rate count`,
@@ -35,5 +34,4 @@ BEGIN
     FROM cte_rating
        JOIN cte_visits ON cte_rating.sportclub_id = cte_visits.sportclub_id
     LIMIT club_count;
-
 END$$;

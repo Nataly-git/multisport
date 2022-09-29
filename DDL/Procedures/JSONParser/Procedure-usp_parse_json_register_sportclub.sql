@@ -70,11 +70,11 @@ BEGIN
             guest_id)
     WITH cte_guest AS(
         SELECT guest_id
-        FROM guest
-        WHERE guest.time = @time
-          AND guest.browser = @browser
-          AND guest.device = @device
-          AND guest.ip = @ip
+        FROM   guest
+        WHERE  guest.time = @time
+          AND  guest.browser = @browser
+          AND  guest.device = @device
+          AND  guest.ip = @ip
     )
     SELECT  @email,
             @name,
@@ -124,6 +124,5 @@ BEGIN
                            )
                 ) AS activities
                    JOIN activity ON activities.activity_name = activity.name;
-
     COMMIT;
 END$$

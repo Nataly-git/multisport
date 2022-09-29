@@ -102,6 +102,5 @@ BEGIN
             @street,
             @building,
             @phone_number);
-
     COMMIT;
 END$$

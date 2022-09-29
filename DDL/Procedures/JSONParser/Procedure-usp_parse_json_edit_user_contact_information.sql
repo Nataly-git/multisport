@@ -26,7 +26,6 @@ BEGIN
                     ) AS user_contacts
                JOIN user ON user_contacts.email = user.email
             )
-
     UPDATE user_contacts uc, cte_contacts_info cte
     SET    uc.apartments = IF(cte.apartments IS NOT NULL, cte.apartments, uc.apartments),
            uc.city = IF(cte.city IS NOT NULL, cte.city, uc.city),

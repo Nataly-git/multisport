@@ -19,7 +19,6 @@ BEGIN
         GROUP BY sa.sportclub_id,
                  c.card_type_id
         ),
-
     cte_all_visits AS (
         SELECT s.sportclub_id,
                COUNT(s.name) AS `All visits number`

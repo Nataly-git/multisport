@@ -71,8 +71,8 @@ BEGIN
                current_month_percentage - prev_month_percentage AS difference
         FROM card_type
             JOIN cte_current_month_percentage cm ON card_type.type = cm.type
-            JOIN cte_prev_month_percentage pm ON card_type.type = pm.type)
-
+            JOIN cte_prev_month_percentage pm ON card_type.type = pm.type
+        )
     SELECT ct.type                          AS `Card type`,
            pms.paid_orders_in_prev_month    AS `Orders in previous month`,
            pmp.prev_month_percentage        AS `Previous month percentage`,
