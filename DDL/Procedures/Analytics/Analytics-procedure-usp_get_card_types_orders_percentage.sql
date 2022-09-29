@@ -105,7 +105,3 @@ BEGIN
                   ON card_type.type = cte_difference.type;
 END
 $$
-
-
-
-
