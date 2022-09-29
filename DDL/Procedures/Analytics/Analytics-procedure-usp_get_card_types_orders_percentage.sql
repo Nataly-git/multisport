@@ -86,12 +86,12 @@ BEGIN
                                      JOIN cte_prev_month_percentage
                                           ON card_type.type = cte_prev_month_percentage.type)
 
-    SELECT card_type.type,
-           cte_prev_month_stat.paid_orders_in_prev_month,
-           cte_prev_month_percentage.prev_month_percentage,
-           cte_current_month_stat.paid_orders_in_current_month,
-           cte_current_month_percentage.current_month_percentage,
-           cte_difference.difference
+    SELECT card_type.type `Card type`,
+           cte_prev_month_stat.paid_orders_in_prev_month `Orders in previous month`,
+           cte_prev_month_percentage.prev_month_percentage `Previous month percentage`,
+           cte_current_month_stat.paid_orders_in_current_month `Orders in current month`,
+           cte_current_month_percentage.current_month_percentage `Current month percentage`,
+           cte_difference.difference `Difference`
     FROM card_type
              JOIN cte_current_month_stat
                   ON card_type.type = cte_current_month_stat.type

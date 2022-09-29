@@ -30,8 +30,8 @@ BEGIN
           AND    YEAR(date_time)=year_number
         GROUP BY s.name
         )
-    SELECT sportclub.name,
-           ct.type,
+    SELECT sportclub.name `Sportclub name`,
+           ct.type `Card type`,
            IF(cte_card_type_visits.count, cte_card_type_visits.count, 0) AS `Number of visits`,
            IF(cte_card_type_visits.count, ROUND((cte_card_type_visits.count / cte_all_visits.`All visits number`) * 100, 2), 0) AS Percentage
     FROM   sportclub
