@@ -23,5 +23,5 @@ BEGIN
     UPDATE sportclub_contacts sc, cte_contacts_info cte
     SET    sc.working_hours = IF(cte.working_hours IS NOT NULL, cte.working_hours, sc.working_hours),
            sc.phone_number = IF(cte.phone_number IS NOT NULL, cte.phone_number, sc.phone_number)
-    WHERE sc.sportclub_id = cte.sportclub_id;
+    WHERE  sc.sportclub_id = cte.sportclub_id;
 END$$

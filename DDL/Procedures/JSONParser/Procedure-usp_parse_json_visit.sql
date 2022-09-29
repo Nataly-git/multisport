@@ -26,7 +26,8 @@ BEGIN
                     ) AS user_visit
              JOIN sportclub ON user_visit.sportclub_email = sportclub.email
              JOIN activity ON user_visit.activityName = activity.name
-             JOIN card ON user_visit.card_number = card.number)
+             JOIN card ON user_visit.card_number = card.number
+         )
 
     SELECT            card_id,
                       sportclub_activity_id,

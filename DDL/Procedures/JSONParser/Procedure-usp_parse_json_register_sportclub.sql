@@ -83,12 +83,12 @@ BEGIN
             @street,
             @building,
             cte_guest.guest_id
-    FROM cte_guest;
+    FROM    cte_guest;
 
     SELECT sportclub_id
-    INTO @sportclub_id
-    FROM sportclub
-    WHERE email = @email;
+    INTO   @sportclub_id
+    FROM   sportclub
+    WHERE  email = @email;
 
     INSERT INTO sportclub_contacts (
             sportclub_id,
@@ -99,8 +99,8 @@ BEGIN
             @phone_number);
 
     INSERT INTO sportclub_card_types(
-        sportclub_id,
-        card_type_id)
+            sportclub_id,
+            card_type_id)
     SELECT  @sportclub_id,
             card_type_id
     FROM    json_table(json_add_sportclub, '$.cardTypes[*]'
@@ -111,9 +111,9 @@ BEGIN
                    JOIN card_type ON types.type = card_type.type;
 
     INSERT INTO sportclub_activity(
-        sportclub_id,
-        activity_id,
-        duration)
+            sportclub_id,
+            activity_id,
+            duration)
     SELECT  @sportclub_id,
             activity_id,
             duration
