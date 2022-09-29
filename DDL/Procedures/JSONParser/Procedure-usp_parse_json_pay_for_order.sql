@@ -57,7 +57,11 @@ BEGIN
            @payment_date,
            @payment_method);
 
-    SELECT last_insert_id() INTO @payment_id;
+    SELECT payment_id
+    INTO   @payment_id
+    FROM   payment
+    WHERE  order_id = @order_id
+    AND    date=@payment_date;
 
     INSERT INTO card(
            number,

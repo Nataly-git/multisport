@@ -63,21 +63,31 @@ BEGIN
             @ip,
             @device);
 
-    SELECT last_insert_id() INTO @guest_id;
-
     INSERT INTO user(
             email,
             name,
             surname,
             password,
             guest_id)
-    VALUES (@email,
+    WITH cte_guest AS(
+        SELECT guest_id
+        FROM guest
+        WHERE guest.time = @time
+          AND guest.browser = @browser
+          AND guest.device = @device
+          AND guest.ip = @ip
+    )
+    SELECT  @email,
             @name,
             @surname,
             @password,
-            @guest_id);
+            cte_guest.guest_id
+    FROM    cte_guest;
 
-    SELECT last_insert_id() INTO @user_id;
+    SELECT  user_id
+    INTO    @user_id
+    FROM    user
+    WHERE   email=@email;
 
     INSERT INTO user_contacts(
             user_id,
