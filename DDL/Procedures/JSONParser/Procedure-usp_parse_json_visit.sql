@@ -10,13 +10,13 @@ BEGIN
                       card_id,
                       sportclub_activity_id,
                       date_time)
-    WITH cte_user_visit AS
-        (SELECT       sportclub_id,
+    WITH cte_user_visit AS(
+        SELECT       sportclub_id,
                       card_id,
                       activity_id,
                       date_time,
                       card_type_id
-         FROM json_table(json_visit, '$'
+        FROM json_table(json_visit, '$'
                     COLUMNS (
                              card_number     VARCHAR(20)  PATH '$.card.number',
                              sportclub_email VARCHAR(100) PATH '$.sportClub.email',
